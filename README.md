@@ -1,7 +1,7 @@
-# Strona Dni Do Matury
-🇵🇱 Strona odliczająca miesiące / dni / godziny / minuty do matur. Stworzone przez Macieja Błędkowskiego
+# Strona "Dni Do Matury"
+🇵🇱 Strona odliczająca miesiące / dni / godziny / minuty do egzaminów maturalnych. Stworzona przez Macieja Błędkowskiego.
 
-🇬🇧/🇺🇸 Site that is counting months / days / hours / minutes to matura exams. Created by Maciej Błędkowski.
+🇬🇧/🇺🇸 Site that is counting up months / days / hours / minutes to matura exams. Created by Maciej Błędkowski.
 
 ![Thumbnail](/public/img/thumbnail.jpg)
 
@@ -11,4 +11,3 @@ Technologies that I used in this project:
  - Pug.js
  - Sass
  - [Countdown.js](https://github.com/mckamey/countdownjs)
- 
