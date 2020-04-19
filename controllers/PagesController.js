@@ -4,6 +4,7 @@ let cache_getTimersValues = [, , ,],
   cachedate_getTimersValues = [0, 0, 0, 0]
 
 exports.index = (req, res, next) => {
+  console.log(req.params.unit)
   let unit = (req.params.unit === 'miesiace' || req.params.unit === 'miesiące') ?
     3 :
     req.params.unit === 'dni' ?

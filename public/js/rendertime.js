@@ -33,9 +33,9 @@ let changeUnits = (element, num) => {
   document.title = `Odliczanie ${wordForms[2][num]} do matury - dnidomatury.pl`
 
   if (num !== 2) {
-    history.pushState({}, "", wordForms[1][num])
+    history.pushState({}, "", `/${wordForms[1][num]}`)
   } else {
-    history.pushState({}, "", ".")
+    history.pushState({}, "", "/")
   }
 
   getTimersValues(num, getUnits(num))
@@ -56,8 +56,8 @@ const chooseWordForm = (num, type) => {
   return (num === 1) ?
     wordForms[0][type] :
     ((num > 21 || num < 5) && (num % 10 > 1 && num % 10 < 5)) ?
-    wordForms[1][type] :
-    wordForms[2][type]
+      wordForms[1][type] :
+      wordForms[2][type]
 }
 
 /* getUnits - contains array of all posible unit types
@@ -70,16 +70,16 @@ const getUnits = num => {
   let tempUnits = (num === 3) ?
     allUnits :
     (num === 2) ?
-    allUnits.slice(1) :
-    (num === 1) ?
-    allUnits.slice(2) :
-    (num === 0) ?
-    allUnits.slice(3) : []
+      allUnits.slice(1) :
+      (num === 1) ?
+        allUnits.slice(2) :
+        (num === 0) ?
+          allUnits.slice(3) : []
 
   return tempUnits.reduce((a, b) => a + b, 0)
 }
 
-let previousCountdown = [, ]
+let previousCountdown = [,]
 const mainUnitDOM = document.querySelector('#timer > #mainUnit')
 const subUnitsDOM = document.querySelector('#timer > #subUnits')
 
