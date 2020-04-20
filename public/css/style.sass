@@ -142,25 +142,26 @@ nav
   @media (min-width: 320px) and (max-width: 644px)
     height: calc(36px + (44 - 36) * (100vw - 320px)/(644 - 320))
 
-  > button.checked
-    color: var(--main-leading-colour)
-    transform: translateY(12px)
-  > button.disactivated
-    color: var(--main-grayed-out)
-  > button
-    font: inherit
-    font-size: 28px
-    border: 0
-    padding: 0
-    background: none
-    color: var(--main-white)
-    cursor: pointer
-    transition: transform ease-out .15s
-    @media (max-width: 320px)
-      font-size: 16px
+  > a
+    > button.checked
+      color: var(--main-leading-colour)
+      transform: translateY(12px)
+    > button.disactivated
+      color: var(--main-grayed-out)
+    > button
+      font: inherit
+      font-size: 28px
+      border: 0
+      padding: 0
+      background: none
+      color: var(--main-white)
+      cursor: pointer
+      transition: transform ease-out .15s
+      @media (max-width: 320px)
+        font-size: 16px
 
-    @media (min-width: 320px) and (max-width: 644px)
-      font-size: calc(16px + (28 - 16) * (100vw - 320px)/(644 - 320))
+      @media (min-width: 320px) and (max-width: 644px)
+        font-size: calc(16px + (28 - 16) * (100vw - 320px)/(644 - 320))
 
   @media (min-width: 644px)
     padding: 0 22.53px

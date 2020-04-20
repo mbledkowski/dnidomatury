@@ -24,7 +24,8 @@ const wordForms = [{
   4: "sekund"
 }]
 
-let changeUnits = (element, num) => {
+let changeUnits = (element, num, event) => {
+  event.preventDefault()
   mainUnitType = num //it is manditory because "setInterval" is using this value, and otherwise timer would continue showing values coresponding to mainTypeUnit
 
   document.querySelector(".checked").classList.remove("checked")
@@ -42,10 +43,10 @@ let changeUnits = (element, num) => {
   setTimer()
 }
 
-document.querySelector('#months').addEventListener("click", () => changeUnits(document.querySelector('#months'), 3))
-document.querySelector('#days').addEventListener("click", () => changeUnits(document.querySelector('#days'), 2))
-document.querySelector('#hours').addEventListener("click", () => changeUnits(document.querySelector('#hours'), 1))
-document.querySelector('#minutes').addEventListener("click", () => changeUnits(document.querySelector('#minutes'), 0))
+document.querySelector('#months').addEventListener("click", (event) => changeUnits(document.querySelector('#months'), 3, event))
+document.querySelector('#days').addEventListener("click", (event) => changeUnits(document.querySelector('#days'), 2, event))
+document.querySelector('#hours').addEventListener("click", (event) => changeUnits(document.querySelector('#hours'), 1, event))
+document.querySelector('#minutes').addEventListener("click", (event) => changeUnits(document.querySelector('#minutes'), 0, event))
 
 
 const chooseWordForm = (num, type) => {

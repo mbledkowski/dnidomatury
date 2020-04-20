@@ -6,10 +6,14 @@ block content
       nav
         - var isChecked = ['','','','']
         - isChecked[unit] = "checked"
-        button(id="months" class=isChecked[3]) miesiące
-        button(id="days" class=isChecked[2]) dni
-        button(id="hours" class=isChecked[1]) godziny
-        button(id="minutes" class=isChecked[0]) minuty
+        a(href="/miesiące")
+          button(id="months" class=isChecked[3]) miesiące
+        a(href="/")
+          button(id="days" class=isChecked[2]) dni
+        a(href="/godziny")
+          button(id="hours" class=isChecked[1]) godziny
+        a(href="/minuty")
+          button(id="minutes" class=isChecked[0]) minuty
     main
         div(id="timer")
           div(id="mainUnit" value=initialTimersValues[0]) #{initialTimersValues[0]}

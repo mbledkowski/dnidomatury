@@ -17,7 +17,9 @@ app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: true
+  sourceMap: true,
+  debug: true,
+  outputStyle: 'compressed'
 }))
 
 app.use(express.static(path.join(__dirname, 'public')))
