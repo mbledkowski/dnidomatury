@@ -37,7 +37,7 @@ let changeUnits = (element, num, event) => {
   document.querySelector(".checked").classList.remove("checked")
   element.classList.add("checked")
 
-  document.title = `Odliczanie ${wordForms[2][num]} do matury - dnidomatury.pl`
+  document.title = `Odliczanie ${wordForms[2][num]} do matury ${choosenYear} - dnidomatury.pl`
 
   if (num !== 2 && choosenYear !== 2020) {
     history.pushState({}, "", `/${wordForms[1][num]}/${choosenYear}`)
@@ -55,6 +55,7 @@ let changeUnits = (element, num, event) => {
 
 let changeYear = (year, num) => {
   choosenYear = year
+  document.title = `Odliczanie ${wordForms[2][num]} do matury ${choosenYear} - dnidomatury.pl`
   if (num !== 2 && choosenYear !== 2020) {
     history.pushState({}, "", `/${wordForms[1][num]}/${choosenYear}`)
   } else if (num !== 2) {

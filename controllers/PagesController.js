@@ -32,9 +32,8 @@ exports.index = (req, res, next) => {
   let endDate = (year === 2020) ? "?" : "22 maja"
 
   let variables = {
-    title: `Odliczanie ${unitNames[unit]} do matury - dnidomatury.pl`,
+    title: `Odliczanie ${unitNames[unit]} do matury ${year}  - dnidomatury.pl`,
     startDate: startDate,
-    startYear: '2020',
     endDate: endDate,
     schoolEndDate: '24 kwietnia',
     links: {
