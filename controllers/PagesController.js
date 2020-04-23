@@ -1,10 +1,9 @@
 const getTimersValues = require('./PagesController/rendertime')
 
-let cache_getTimersValues = [, , ,],
-  cachedate_getTimersValues = [0, 0, 0, 0]
+let cache_getTimersValues = [[, , , ,], [, , , ,], [, , , ,], [, , , ,]],
+  cachedate_getTimersValues = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 
 exports.index = (req, res, next) => {
-  console.log(req.params.unit)
   let unit = (req.params.unit === 'miesiace' || req.params.unit === 'miesiące') ?
     3 :
     req.params.unit === 'dni' ?
@@ -14,13 +13,13 @@ exports.index = (req, res, next) => {
         req.params.unit === 'minuty' ?
           0 :
           2
+  let year = req.params.year ? req.params.year : 2020
 
   //do not update values more often then after 1 second
-  if (Date.now() - cachedate_getTimersValues[unit] > 1000) {
-    cachedate_getTimersValues[unit] = Date.now()
-    cache_getTimersValues[unit] = getTimersValues.default(unit)
+  if (Date.now() - cachedate_getTimersValues[unit][year % 5] > 1000) {
+    cachedate_getTimersValues[unit][year % 5] = Date.now()
+    cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
   }
-
   const unitNames = {
     3: "miesięcy",
     2: "dni",
@@ -28,19 +27,24 @@ exports.index = (req, res, next) => {
     0: "minut"
   }
 
+  let startDate = (year === 2020) ? "? czerwca" : "4 maja"
+
+  let endDate = (year === 2020) ? "?" : "22 maja"
+
   let variables = {
     title: `Odliczanie ${unitNames[unit]} do matury - dnidomatury.pl`,
-    startDate: '4 maja',
+    startDate: startDate,
     startYear: '2020',
-    endDate: '22 maja',
+    endDate: endDate,
     schoolEndDate: '24 kwietnia',
     links: {
       ig: 'mbledkowski',
       linkedin: 'mbledkowski',
-      github: 'mmble'
+      github: 'mmble/DniDoMatury_site'
     },
     unit: unit,
-    initialTimersValues: cache_getTimersValues[unit]
+    year: year,
+    initialTimersValues: cache_getTimersValues[unit][year % 5]
   }
 
   res.render('index', variables)

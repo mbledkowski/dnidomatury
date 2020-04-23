@@ -1,6 +1,12 @@
 const countdown = require('./countdown.js')
 
-let firstExamDate = new Date('4 May 2020')
+let firstExamDate = {
+  2020: new Date('June 2020 GMT+02:00'),
+  2021: new Date('4 May 2021 9:00 GMT+02:00'),
+  2022: new Date('4 May 2022 9:00 GMT+02:00'),
+  2023: new Date('4 May 2023 9:00 GMT+02:00'),
+  2024: new Date('4 May 2024 9:00 GMT+02:00')
+}
 
 const wordForms = [{
   3: 'miesiąc',
@@ -28,11 +34,11 @@ const getUnits = num => {
   let tempUnits = (num === 3) ?
     allUnits :
     (num === 2) ?
-    allUnits.slice(1) :
-    (num === 1) ?
-    allUnits.slice(2) :
-    (num === 0) ?
-    allUnits.slice(3) : []
+      allUnits.slice(1) :
+      (num === 1) ?
+        allUnits.slice(2) :
+        (num === 0) ?
+          allUnits.slice(3) : []
 
   return tempUnits.reduce((a, b) => a + b, 0)
 }
@@ -45,14 +51,14 @@ const chooseWordForm = (num, type) => {
   return (num === 1) ?
     wordForms[0][type] :
     ((num > 21 || num < 5) && (num % 10 > 1 && num % 10 < 5)) ?
-    wordForms[1][type] :
-    wordForms[2][type]
+      wordForms[1][type] :
+      wordForms[2][type]
 }
 
-const getTimersValues = (num) => {
+const getTimersValues = (num, year) => {
   let units = getUnits(num)
 
-  let timeto = countdown(firstExamDate, null, units, 3) // time to exam, from the current time, units, maximum 3 of them
+  let timeto = countdown(firstExamDate[year], null, units, 3) // time to exam, from the current time, units, maximum 3 of them
   let mainUnit, subUnits
 
   //let keys = ["months", "days", "hours", "minutes", "seconds"]

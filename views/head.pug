@@ -16,6 +16,6 @@ html(lang='pl')
     meta(name="theme-color", content="#fff")
     meta(meta property="og:image" content="/img/thumbnail.jpg")
     script
-      | let mainUnitType = #{unit}
+      | let mainUnitType = #{unit}; let choosenYear = #{year};
   body
     block content

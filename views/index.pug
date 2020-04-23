@@ -27,8 +27,17 @@ block content
             |. Rok szkolny dla klas maturalnych zakończy się
             b  #{schoolEndDate}
             |.
-          h3 Dotyczy roku #{startYear}.
-            br
+          h2
+            |Rok: 
+            - var isSelected = [false,false,false,false,false]
+            - isSelected[year%5] = true
+            select(name="year" id="year-select")
+              option(value="2020" selected=isSelected[0]) 2020
+              option(value="2021" selected=isSelected[1]) 2021
+              option(value="2022" selected=isSelected[2]) 2022
+              option(value="2023" selected=isSelected[3]) 2023
+              option(value="2024" selected=isSelected[4]) 2024
+          h3
             | Source: 
             a(href="https://cke.gov.pl/egzamin-maturalny" target="_blank" rel="nofollow noopener") https://cke.gov.pl/egzamin-maturalny
           include noscript
@@ -37,11 +46,11 @@ block content
         b Created by @mbledkowski
       div(id="socialIcons")
         a(href=`https://instagram.com/${links.ig}` target="_blank" rel="noopener")
-          img(src="img/social/instagram.svg" loading="lazy" alt="Instagram icon")
+          img(src="/img/social/instagram.svg" loading="lazy" alt="Instagram icon")
         a(href=`https://github.com/${links.github}` target="_blank"  rel="noopener")
-          img(src="img/social/github.svg" loading="lazy" alt="GitHub icon")
+          img(src="/img/social/github.svg" loading="lazy" alt="GitHub icon")
         a(href=`https://linkedin.com/in/${links.linkedin}` target="_blank" rel="noopener")
-          img(src="img/social/linkedin.svg" loading="lazy" alt="LinkedIn icon")
+          img(src="/img/social/linkedin.svg" loading="lazy" alt="LinkedIn icon")
         // Icons from simpleicons.org
     script(async type="module" src="/js/rendertime.js")
     script
