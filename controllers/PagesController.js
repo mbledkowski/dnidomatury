@@ -27,9 +27,9 @@ exports.index = (req, res, next) => {
     0: "minut"
   }
 
-  let startDate = (year === 2020) ? "? czerwca" : "4 maja"
+  let startDate = (year === 2020) ? "8 czerwca" : "4 maja"
 
-  let endDate = (year === 2020) ? "?" : "22 maja"
+  let endDate = (year === 2020) ? "29 czerwca" : "22 maja"
 
   let variables = {
     title: `Odliczanie ${unitNames[unit]} do matury ${year}  - dnidomatury.pl`,
