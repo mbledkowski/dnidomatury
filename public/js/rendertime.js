@@ -66,8 +66,8 @@ let changeYear = (year, num) => {
     history.pushState({}, "", "/")
   }
   setTimer()
-  let startDate = (year === 2020) ? " ? czerwca" : " 4 maja"
-  let endDate = (year === 2020) ? " ?" : " 22 maja"
+  let startDate = (year === 2020) ? " 8 czerwca" : " 4 maja"
+  let endDate = (year === 2020) ? " 29 czerwca" : " 22 maja"
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(1)').innerHTML = startDate
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(2)').innerHTML = endDate
 }
