@@ -3,7 +3,7 @@
 import countdown from './countdown.js'
 
 let firstExamDate = {
-  2020: new Date('June 2020 GMT+02:00'),
+  2020: new Date('8 June 2020 9:00 GMT+02:00'),
   2021: new Date('4 May 2021 9:00 GMT+02:00'),
   2022: new Date('4 May 2022 9:00 GMT+02:00'),
   2023: new Date('4 May 2023 9:00 GMT+02:00'),
