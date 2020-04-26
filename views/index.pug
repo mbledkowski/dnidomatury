@@ -28,7 +28,7 @@ block content
             b  #{schoolEndDate}
             |.
           h2
-            |Rok: 
+            label(for="year-select") Rok: 
             - var isSelected = [false,false,false,false,false]
             - isSelected[year%5] = true
             select(name="year" id="year-select")
