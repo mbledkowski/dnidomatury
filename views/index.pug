@@ -15,31 +15,32 @@ block content
         a(href="/minuty")
           button(id="minutes" class=isChecked[0]) minuty
     main
-        div(id="timer")
-          div(id="mainUnit" value=initialTimersValues[0]) #{initialTimersValues[0]}
-          div(id="subUnits" value=initialTimersValues[1]) #{initialTimersValues[1]}
-        article
-          h2
-            | Matura rozpocznie się
-            b  #{startDate}
-            |  i będzie trwać do
-            b  #{endDate}
-            |. Rok szkolny dla klas maturalnych zakończy się
-            b  #{schoolEndDate}
-            |.
-          h2
-            label(for="year-select") Rok: 
-            - var isSelected = [false,false,false,false,false]
-            - isSelected[year%5] = true
-            select(name="year" id="year-select")
-              option(value="2020" selected=isSelected[0]) 2020
-              option(value="2021" selected=isSelected[1]) 2021
-              option(value="2022" selected=isSelected[2]) 2022
-              option(value="2023" selected=isSelected[3]) 2023
-              option(value="2024" selected=isSelected[4]) 2024
-          h3
-            | Source: 
-            a(href="https://cke.gov.pl/egzamin-maturalny" target="_blank" rel="nofollow noopener") https://cke.gov.pl/egzamin-maturalny
+      div(id="timer")
+        h2 do matury #{year} zostało
+        div(id="mainUnit" value=initialTimersValues[0]) #{initialTimersValues[0]}
+        div(id="subUnits" value=initialTimersValues[1]) #{initialTimersValues[1]}
+      article
+        h2
+          | Matura rozpocznie się
+          b  #{startDate}
+          |  i będzie trwać do
+          b  #{endDate}
+          |. Rok szkolny dla klas maturalnych zakończy się
+          b  #{schoolEndDate}
+          |.
+        h2
+          label(for="year-select") Rok: 
+          - var isSelected = [false,false,false,false,false]
+          - isSelected[year%5] = true
+          select(name="year" id="year-select")
+            option(value="2020" selected=isSelected[0]) 2020
+            option(value="2021" selected=isSelected[1]) 2021
+            option(value="2022" selected=isSelected[2]) 2022
+            option(value="2023" selected=isSelected[3]) 2023
+            option(value="2024" selected=isSelected[4]) 2024
+        h3
+          | Source: 
+          a(href="https://cke.gov.pl/egzamin-maturalny" target="_blank" rel="nofollow noopener") https://cke.gov.pl/egzamin-maturalny
           include noscript
     footer
       h2
