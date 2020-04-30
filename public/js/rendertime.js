@@ -71,6 +71,17 @@ let changeYear = (year, num) => {
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(1)').innerHTML = startDate
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(2)').innerHTML = endDate
   document.querySelector('body > main > #timer > h2').innerHTML = `Do matury ${choosenYear} zostało:`
+  if (choosenYear === 2020) {
+    document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące`
+    document.querySelectorAll('body > header > nav > a')[1].href = `/`
+    document.querySelectorAll('body > header > nav > a')[2].href = `/godziny`
+    document.querySelectorAll('body > header > nav > a')[3].href = `/minuty`
+  } else {
+    document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące/${choosenYear}`
+    document.querySelectorAll('body > header > nav > a')[1].href = `/${choosenYear}`
+    document.querySelectorAll('body > header > nav > a')[2].href = `/godziny/${choosenYear}`
+    document.querySelectorAll('body > header > nav > a')[3].href = `/minuty/${choosenYear}`
+  }
 }
 
 document.querySelector('#months').addEventListener("click", (event) => changeUnits(document.querySelector('#months'), 3, event))

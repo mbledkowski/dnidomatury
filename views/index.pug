@@ -6,14 +6,24 @@ block content
       nav
         - var isChecked = ['','','','']
         - isChecked[unit] = "checked"
-        a(href="/miesiące")
-          button(id="months" class=isChecked[3]) miesiące
-        a(href="/")
-          button(id="days" class=isChecked[2]) dni
-        a(href="/godziny")
-          button(id="hours" class=isChecked[1]) godziny
-        a(href="/minuty")
-          button(id="minutes" class=isChecked[0]) minuty
+        if year === 2020
+          a(href="/miesiące")
+            button(id="months" class=isChecked[3]) miesiące
+          a(href="/")
+            button(id="days" class=isChecked[2]) dni
+          a(href="/godziny")
+            button(id="hours" class=isChecked[1]) godziny
+          a(href="/minuty")
+            button(id="minutes" class=isChecked[0]) minuty
+        else
+          a(href=`/miesiące/${year}`)
+            button(id="months" class=isChecked[3]) miesiące
+          a(href=`/${year}`)
+            button(id="days" class=isChecked[2]) dni
+          a(href=`/godziny/${year}`)
+            button(id="hours" class=isChecked[1]) godziny
+          a(href=`/minuty/${year}`)
+            button(id="minutes" class=isChecked[0]) minuty
     main
       div(id="timer")
         h2 Do matury #{year} zostało:
