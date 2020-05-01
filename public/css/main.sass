@@ -1,0 +1,171 @@
+\:root
+  --main-white: white
+  --main-black: black
+  --main-leading-colour: #FFEF32 //#ffbc32
+  --main-grayed-out: #1a1a1a
+
+html, body
+  height: 100%
+body
+  margin: 0
+  font: 14px "Montserrat", "Helvetica Neue Extended", sans-serif
+  font-weight: 700
+  min-width: 320px
+  background: var(--main-white)
+
+body, header, main, #timer, footer
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+
+header
+  width: 100%
+  > h1
+    color: var(--main-black)
+    margin: 16px 0
+    @media (min-width: 320px) and (max-width: 828px)
+      font-size: calc(36px + (100 - 36) * (100vw - 320px)/(828 - 320))
+
+    @media (min-width: 828px)
+      font-size: 100px
+
+main
+  margin: auto
+  > article
+    display: flex
+    flex-flow: column
+    align-items: center
+    > h2
+      max-width: 500px
+      text-align: justify
+      > #year-select
+        font-size: inherit;
+        font-family: inherit;
+        border: 2px var(--main-black) solid;
+        border-radius: 4px;
+        &::after
+          background: var(--main-leading-colour)
+  > #timer
+    font-family: 'Montserrat'
+    font-weight: 700
+    color: var(--main-leading-colour)
+    margin: 40px 0
+    > h2
+      margin: 0 0 -6px
+      font-weight: 700
+    > #mainUnit
+      font-size: 130px
+      &::before
+        content: attr(value)
+        position: absolute
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke: 4.6px var(--main-black)
+        margin: 6px
+    @media (min-width: 320px) and (max-width: 1015px)
+      margin: calc(22px + (40 - 22) * (100vw - 320px)/(1015 - 320)) 0
+      > #mainUnit
+        font-size: calc(56px + (130 - 56) * (100vw - 320px)/(1015 - 320))
+        &::before
+          -webkit-text-stroke: calc(2.5px + (4.6 - 2.5) * (100vw - 320px)/(1015 - 320)) var(--main-black)
+          margin: calc(2.58px + (6 - 2.58) * (100vw - 320px)/(1015 - 320))
+    > #subUnits
+      font-size: 32px
+      &::before
+        content: attr(value)
+        position: absolute
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke: 2px var(--main-black)
+        margin: -3px
+      @media (min-width: 320px) and (max-width: 380px)
+        font-size: calc(28px + (32 - 28) * (100vw - 320px)/(380 - 320))
+        &::before
+          -webkit-text-stroke: calc(1.75px + (2 - 1.75) * (100vw - 320px)/(380 - 320)) var(--main-black)
+          margin: calc(-2.62px + (-3 + 2.62) * (100vw - 320px)/(380 - 320))
+    > #mainUnit, #mainUnit::before, #subUnits, #subUnits::before
+      max-width: 96vw
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+
+article > h2 > b
+  font-weight: 900
+
+h2, h3
+  font-weight: 500
+  color: var(--main-black)
+
+h2
+  line-height: 1.1
+  margin: 0 24px 16.4px
+  font-size: 21px
+  @media (min-width: 320px) and (max-width: 472px)
+    font-size: calc(13px + (21 - 13) * (100vw - 320px)/(472 - 320))
+footer > h2
+  @media (min-width: 320px) and (max-width: 472px)
+    font-size: calc(16px + (21 - 16) * (100vw - 320px)/(472 - 320))
+h3
+  text-align: center
+  line-height: 1.25
+  margin: 0
+  font-size: 16.4px
+  @media (min-width: 320px) and (max-width: 472px)
+    font-size: calc(10px + (16.4 - 10) * (100vw - 320px)/(472 - 320))
+nav
+  background: var(--main-black)
+  width: calc(100% - 7%)
+  max-width: 600px
+  padding: 0 3.5%
+  height: 44px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-around
+  align-items: center
+
+  @media (min-width: 320px) and (max-width: 644px)
+    height: calc(36px + (44 - 36) * (100vw - 320px)/(644 - 320))
+
+  > a
+    > button.checked
+      color: var(--main-leading-colour)
+      transform: translateY(12px)
+    > button.disactivated
+      color: var(--main-grayed-out)
+    > button
+      font: inherit
+      font-size: 28px
+      border: 0
+      padding: 0
+      background: none
+      color: var(--main-white)
+      cursor: pointer
+      transition: transform ease-out .15s
+      @media (min-width: 320px) and (max-width: 644px)
+        font-size: calc(16px + (28 - 16) * (100vw - 320px)/(644 - 320))
+
+  @media (min-width: 644px)
+    padding: 0 22.53px
+
+footer
+  background: var(--main-leading-colour)
+  width: 100%
+  padding: 25px 0
+  margin: 40px 0 0
+  > h2
+    margin: 0 0 15px
+  @media (min-width: 320px) and (max-width: 1015px)
+    margin: calc(22px + (40 - 22) * (100vw - 320px)/(1015 - 320)) 0 0
+
+#socialIcons
+  display: inline-flex
+  > a
+    display: inline-flex
+    > img
+      height: 25px
+      padding: 0 5px
+      @media (min-width: 320px) and (max-width: 472px)
+        height: calc(20px + (25 - 20) * (100vw - 320px)/(472 - 320))
+        padding: 0 calc(4px + (5 - 4) * (100vw - 320px)/(472 - 320))
+
+a
+  color: var(--main-black)
