@@ -125,6 +125,7 @@ const getUnits = num => {
 }
 
 let previousCountdown = [, ,]
+let previousYear = 0
 const mainUnitDOM = document.querySelector('#timer > #mainUnit')
 const subUnitsDOM = document.querySelector('#timer > #subUnits')
 const timerHeader = document.querySelector('#timer > h2')
@@ -143,13 +144,13 @@ const setTimer = (val) => {
 
     mainUnitDOM.innerHTML = mainUnit
     mainUnitDOM.setAttribute("value", mainUnit)
-    if (previousCountdown[2] !== currentCountdown[2]) {
+    if ((previousCountdown[2] !== currentCountdown[2]) || (previousYear !== choosenYear)) {
       timerHeader.innerHTML = `Do matury ${choosenYear} ${currentCountdown[2]}`
     }
   }
 
   previousCountdown = currentCountdown
-
+  previousYear = choosenYear
 }
 
 const getTimersValues = (num, units) => {
