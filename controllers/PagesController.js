@@ -32,7 +32,7 @@ exports.index = (req, res, next) => {
   let endDate = (year === 2020) ? "29 czerwca" : "22 maja"
 
   let variables = {
-    title: `Ile ${unitNames[unit]} zostało do matury ${year} - dnidomatury.pl`,
+    title: `Ile ${unitNames[unit]} zostało do matury ${year} - DniDoMatury.pl`,
     startDate: startDate,
     endDate: endDate,
     schoolEndDate: '24 kwietnia',
