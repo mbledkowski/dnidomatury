@@ -43,7 +43,8 @@ exports.index = (req, res, next) => {
     },
     unit: unit,
     year: year,
-    initialTimersValues: cache_getTimersValues[unit][year % 5]
+    initialTimersValues: cache_getTimersValues[unit][year % 5],
+    zostacForm: cache_getTimersValues[unit][year % 5][2]
   }
 
   res.render('index', variables)

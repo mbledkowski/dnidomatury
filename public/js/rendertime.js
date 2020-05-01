@@ -30,6 +30,8 @@ const wordForms = [{
   4: "sekund"
 }]
 
+const zostacForms = [{ 0: "został" }, { 0: "zostały" }, { 0: "zostało" }]
+
 let changeUnits = (element, num, event) => {
   event.preventDefault()
   mainUnitType = num //it is manditory because "setInterval" is using this value, and otherwise timer would continue showing values coresponding to mainTypeUnit
@@ -70,7 +72,6 @@ let changeYear = (year, num) => {
   let endDate = (year === 2020) ? " 29 czerwca" : " 22 maja"
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(1)').innerHTML = startDate
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(2)').innerHTML = endDate
-  document.querySelector('body > main > #timer > h2').innerHTML = `Do matury ${choosenYear} zostało:`
   if (choosenYear === 2020) {
     document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące`
     document.querySelectorAll('body > header > nav > a')[1].href = `/`
@@ -92,16 +93,16 @@ document.querySelector('#minutes').addEventListener("click", (event) => changeUn
 document.getElementById('year-select').addEventListener("change", () => changeYear(parseInt(document.getElementById('year-select').value, 10), mainUnitType))
 
 
-const chooseWordForm = (num, type) => {
+const chooseWordForm = (num, words, type) => {
   /* if equal to 1 - first form
   if higher than 21 or less than 5, and last digit is a value between 1 - 5 exclusive - second form
   other - third form
   */
   return (num === 1) ?
-    wordForms[0][type] :
+    words[0][type] :
     ((num > 21 || num < 5) && (num % 10 > 1 && num % 10 < 5)) ?
-      wordForms[1][type] :
-      wordForms[2][type]
+      words[1][type] :
+      words[2][type]
 }
 
 /* getUnits - contains array of all posible unit types
@@ -123,9 +124,10 @@ const getUnits = num => {
   return tempUnits.reduce((a, b) => a + b, 0)
 }
 
-let previousCountdown = [,]
+let previousCountdown = [, ,]
 const mainUnitDOM = document.querySelector('#timer > #mainUnit')
 const subUnitsDOM = document.querySelector('#timer > #subUnits')
+const timerHeader = document.querySelector('#timer > h2')
 
 const setTimer = (val) => {
   let currentCountdown = getTimersValues(mainUnitType, getUnits(mainUnitType)) //, 0)
@@ -141,6 +143,9 @@ const setTimer = (val) => {
 
     mainUnitDOM.innerHTML = mainUnit
     mainUnitDOM.setAttribute("value", mainUnit)
+    if (previousCountdown[2] !== currentCountdown[2]) {
+      timerHeader.innerHTML = `Do matury ${choosenYear} ${currentCountdown[2]}`
+    }
   }
 
   previousCountdown = currentCountdown
@@ -149,29 +154,33 @@ const setTimer = (val) => {
 
 const getTimersValues = (num, units) => {
   let timeto = countdown(firstExamDate[choosenYear], null, units, 3) // time to exam, from the current time, units, maximum 3 of them
-  let mainUnit, subUnits
+  let mainUnit, subUnits, zostacForm
 
   //let keys = ["months", "days", "hours", "minutes", "seconds"]
 
   switch (num) {
     case 3:
-      mainUnit = `${timeto["months"]} ${chooseWordForm(timeto["months"], 3)}`
-      subUnits = `${timeto["days"]} ${chooseWordForm(timeto["days"], 2)} i ${timeto["hours"]} ${chooseWordForm(timeto["hours"], 1)}`
+      zostacForm = chooseWordForm(timeto["months"], zostacForms, 0)
+      mainUnit = `${timeto["months"]} ${chooseWordForm(timeto["months"], wordForms, 3)} `
+      subUnits = `${timeto["days"]} ${chooseWordForm(timeto["days"], wordForms, 2)} i ${timeto["hours"]} ${chooseWordForm(timeto["hours"], wordForms, 1)}`
       break
     case 2:
-      mainUnit = `${timeto["days"]} ${chooseWordForm(timeto["days"], 2)}`
-      subUnits = `${timeto["hours"]} ${chooseWordForm(timeto["hours"], 1)} i ${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], 0)}`
+      zostacForm = chooseWordForm(timeto["days"], zostacForms, 0)
+      mainUnit = `${timeto["days"]} ${chooseWordForm(timeto["days"], wordForms, 2)} `
+      subUnits = `${timeto["hours"]} ${chooseWordForm(timeto["hours"], wordForms, 1)} i ${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], wordForms, 0)}`
       break
     case 1:
-      mainUnit = `${timeto["hours"]} ${chooseWordForm(timeto["hours"], 1)}`
-      subUnits = `${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], 0)} i ${timeto["seconds"]} ${chooseWordForm(timeto["seconds"], 4)}`
+      zostacForm = chooseWordForm(timeto["hours"], zostacForms, 0)
+      mainUnit = `${timeto["hours"]} ${chooseWordForm(timeto["hours"], wordForms, 1)} `
+      subUnits = `${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], wordForms, 0)} i ${timeto["seconds"]} ${chooseWordForm(timeto["seconds"], wordForms, 4)}`
       break
     case 0:
-      mainUnit = `${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], 0)}`
-      subUnits = `${timeto["seconds"]} ${chooseWordForm(timeto["seconds"], 4)}`
+      zostacForm = chooseWordForm(timeto["minutes"], zostacForms, 0)
+      mainUnit = `${timeto["minutes"]} ${chooseWordForm(timeto["minutes"], wordForms, 0)} `
+      subUnits = `${timeto["seconds"]} ${chooseWordForm(timeto["seconds"], wordForms, 4)}`
       break
   }
-  return [mainUnit, subUnits]
+  return [mainUnit, subUnits, zostacForm]
 
 }
 
