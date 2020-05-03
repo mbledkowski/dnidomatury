@@ -13,7 +13,6 @@
  - [Countdown.js](https://github.com/mckamey/countdownjs)
 
 ### Sub-directories:
- - Dni do matury w 2020 - https://dnidomatury.pl/
  - Miesiące do matury w 2020 - https://dnidomatury.pl/miesiące/
  - Godziny do matury w 2020 - https://dnidomatury.pl/godziny/
  - Dni do matury w 2021 - https://dnidomatury.pl/2021/
