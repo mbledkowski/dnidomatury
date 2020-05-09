@@ -23,11 +23,12 @@ self.addEventListener('install', event => {
         '/minuty/2024',
         '/img/social/github.svg',
         '/img/social/instagram.svg',
-        '/img/social/linkedin.svg',
+        '/img/social/linkedin.svg'
       ])
       return cache.addAll([
         '/',
-        '/css/style.css',
+        '/css/main.css',
+        '/css/320andless.css',
         '/js/countdown.js',
         '/js/rendertime.js'
       ])
