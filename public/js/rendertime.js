@@ -2,6 +2,9 @@
 
 import countdown from './countdown-min.js'
 
+// unit - type of main unit
+// selYear - selected year
+
 let firstExamDate = {
   2020: new Date('8 June 2020 9:00 GMT+02:00'),
   2021: new Date('4 May 2021 9:00 GMT+02:00'),
@@ -34,19 +37,19 @@ const zostacForms = [{ 0: "został" }, { 0: "zostały" }, { 0: "zostało" }]
 
 let changeUnits = (element, num, event) => {
   event.preventDefault()
-  mainUnitType = num //it is manditory because "setInterval" is using this value, and otherwise timer would continue showing values coresponding to mainTypeUnit
+  unit = num //it is manditory because "setInterval" is using this value, and otherwise timer would continue showing values coresponding to mainTypeUnit
 
   document.querySelector(".checked").classList.remove("checked")
   element.classList.add("checked")
 
-  document.title = `Ile ${wordForms[2][num]} zostało do matury ${choosenYear} - DniDoMatury.pl`
+  document.title = `Ile ${wordForms[2][num]} zostało do matury ${selYear} - DniDoMatury.pl`
 
-  if (num !== 2 && choosenYear !== 2020) {
-    history.pushState({}, "", `/${wordForms[1][num]}/${choosenYear}`)
+  if (num !== 2 && selYear !== 2020) {
+    history.pushState({}, "", `/${wordForms[1][num]}/${selYear}`)
   } else if (num !== 2) {
     history.pushState({}, "", `/${wordForms[1][num]}`)
-  } else if (choosenYear !== 2020) {
-    history.pushState({}, "", `/${choosenYear}`)
+  } else if (selYear !== 2020) {
+    history.pushState({}, "", `/${selYear}`)
   } else {
     history.pushState({}, "", "/")
   }
@@ -56,14 +59,14 @@ let changeUnits = (element, num, event) => {
 }
 
 let changeYear = (year, num) => {
-  choosenYear = year
-  document.title = `Ile ${wordForms[2][num]} zostało do matury ${choosenYear} - DniDoMatury.pl`
-  if (num !== 2 && choosenYear !== 2020) {
-    history.pushState({}, "", `/${wordForms[1][num]}/${choosenYear}`)
+  selYear = year
+  document.title = `Ile ${wordForms[2][num]} zostało do matury ${selYear} - DniDoMatury.pl`
+  if (num !== 2 && selYear !== 2020) {
+    history.pushState({}, "", `/${wordForms[1][num]}/${selYear}`)
   } else if (num !== 2) {
     history.pushState({}, "", `/${wordForms[1][num]}`)
-  } else if (choosenYear !== 2020) {
-    history.pushState({}, "", `/${choosenYear}`)
+  } else if (selYear !== 2020) {
+    history.pushState({}, "", `/${selYear}`)
   } else {
     history.pushState({}, "", "/")
   }
@@ -72,16 +75,16 @@ let changeYear = (year, num) => {
   let endDate = (year === 2020) ? " 29 czerwca" : " 22 maja"
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(1)').innerHTML = startDate
   document.querySelector('body > main > article > h2:nth-child(1) > b:nth-child(2)').innerHTML = endDate
-  if (choosenYear === 2020) {
+  if (selYear === 2020) {
     document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące`
     document.querySelectorAll('body > header > nav > a')[1].href = `/`
     document.querySelectorAll('body > header > nav > a')[2].href = `/godziny`
     document.querySelectorAll('body > header > nav > a')[3].href = `/minuty`
   } else {
-    document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące/${choosenYear}`
-    document.querySelectorAll('body > header > nav > a')[1].href = `/${choosenYear}`
-    document.querySelectorAll('body > header > nav > a')[2].href = `/godziny/${choosenYear}`
-    document.querySelectorAll('body > header > nav > a')[3].href = `/minuty/${choosenYear}`
+    document.querySelectorAll('body > header > nav > a')[0].href = `/miesiące/${selYear}`
+    document.querySelectorAll('body > header > nav > a')[1].href = `/${selYear}`
+    document.querySelectorAll('body > header > nav > a')[2].href = `/godziny/${selYear}`
+    document.querySelectorAll('body > header > nav > a')[3].href = `/minuty/${selYear}`
   }
 }
 
@@ -90,7 +93,7 @@ document.querySelector('#days').addEventListener("click", (event) => changeUnits
 document.querySelector('#hours').addEventListener("click", (event) => changeUnits(document.querySelector('#hours'), 1, event))
 document.querySelector('#minutes').addEventListener("click", (event) => changeUnits(document.querySelector('#minutes'), 0, event))
 
-document.getElementById('year-select').addEventListener("change", () => changeYear(parseInt(document.getElementById('year-select').value, 10), mainUnitType))
+document.getElementById('year-select').addEventListener("change", () => changeYear(parseInt(document.getElementById('year-select').value, 10), unit))
 
 
 const chooseWordForm = (num, words, type) => {
@@ -131,7 +134,7 @@ const subUnitsDOM = document.querySelector('#timer > #subUnits')
 const timerHeader = document.querySelector('#timer > h2')
 
 const setTimer = (val) => {
-  let currentCountdown = getTimersValues(mainUnitType, getUnits(mainUnitType)) //, 0)
+  let currentCountdown = getTimersValues(unit, getUnits(unit)) //, 0)
 
   if (previousCountdown[1] !== currentCountdown[1]) {
     let subUnits = currentCountdown[1]
@@ -144,17 +147,17 @@ const setTimer = (val) => {
 
     mainUnitDOM.innerHTML = mainUnit
     mainUnitDOM.setAttribute("value", mainUnit)
-    if ((previousCountdown[2] !== currentCountdown[2]) || (previousYear !== choosenYear)) {
-      timerHeader.innerHTML = `Do matury ${choosenYear} ${currentCountdown[2]}`
+    if ((previousCountdown[2] !== currentCountdown[2]) || (previousYear !== selYear)) {
+      timerHeader.innerHTML = `Do matury ${selYear} ${currentCountdown[2]}`
     }
   }
 
   previousCountdown = currentCountdown
-  previousYear = choosenYear
+  previousYear = selYear
 }
 
 const getTimersValues = (num, units) => {
-  let timeto = countdown(firstExamDate[choosenYear], null, units, 3) // time to exam, from the current time, units, maximum 3 of them
+  let timeto = countdown(firstExamDate[selYear], null, units, 3) // time to exam, from the current time, units, maximum 3 of them
   let mainUnit, subUnits, zostacForm
 
   //let keys = ["months", "days", "hours", "minutes", "seconds"]

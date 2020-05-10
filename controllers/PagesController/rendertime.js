@@ -1,4 +1,4 @@
-const countdown = require('./countdown.js')
+const countdown = require('./countdown-min.js')
 
 let firstExamDate = {
   2020: new Date('8 June 2020 9:00 GMT+02:00'),

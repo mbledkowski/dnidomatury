@@ -15,10 +15,26 @@ exports.index = (req, res, next) => {
           2
   let year = req.params.year ? req.params.year : 2020
 
-  //do not update values more often then after 1 second
-  if (Date.now() - cachedate_getTimersValues[unit][year % 5] > 1000) {
-    cachedate_getTimersValues[unit][year % 5] = Date.now()
-    cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
+  if (unit === 3) {
+    //do not update values more often then after ~1.17 hours
+    if (Date.now() - cachedate_getTimersValues[unit][year % 5] > 4200000) {
+      cachedate_getTimersValues[unit][year % 5] = Date.now()
+      cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
+    }
+  }
+  else if (unit === 2) {
+    //do not update values more often then after 3 minutes
+    if (Date.now() - cachedate_getTimersValues[unit][year % 5] > 180000) {
+      cachedate_getTimersValues[unit][year % 5] = Date.now()
+      cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
+    }
+  }
+  else {
+    //do not update values more often then after 2.5 second
+    if (Date.now() - cachedate_getTimersValues[unit][year % 5] > 2500) {
+      cachedate_getTimersValues[unit][year % 5] = Date.now()
+      cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
+    }
   }
   const unitNames = {
     3: "miesięcy",
