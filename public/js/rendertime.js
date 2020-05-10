@@ -1,6 +1,6 @@
 'use strict'
 
-import countdown from './countdown.js'
+import countdown from './countdown-min.js'
 
 let firstExamDate = {
   2020: new Date('8 June 2020 9:00 GMT+02:00'),

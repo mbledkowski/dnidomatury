@@ -2,6 +2,7 @@
  * @license countdown.js v2.6.0 http://countdownjs.org
  * Copyright (c)2006-2014 Stephen M. McKamey.
  * Licensed under The MIT License.
+ * Modified by Maciej @mmble Błędkowski
  */
 var module;
 var countdown = (

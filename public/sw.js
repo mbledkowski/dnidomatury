@@ -29,7 +29,7 @@ self.addEventListener('install', event => {
         '/',
         '/css/main.css',
         '/css/320andless.css',
-        '/js/countdown.js',
+        '/js/countdown-min.js',
         '/js/rendertime.js'
       ])
     })
