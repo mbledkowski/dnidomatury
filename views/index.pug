@@ -65,7 +65,9 @@ block content
         // Icons from simpleicons.org
     link(rel='preload' href='/js/countdown-min.js' as='script' crossorigin)
     script(type="module" src="/js/rendertime-min.js" async)
-    link(href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900&display=swap&subset=latin-ext", rel="stylesheet" async)
+    link(rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900&display=swap&subset=latin-ext" as="style" onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900&display=swap&subset=latin-ext")
     script
       | if('serviceWorker' in navigator){
       |   window.addEventListener('load', () => {
