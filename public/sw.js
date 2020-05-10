@@ -30,18 +30,21 @@ self.addEventListener('install', event => {
         '/css/main.css',
         '/css/320andless.css',
         '/js/countdown-min.js',
-        '/js/rendertime.js'
+        '/js/rendertime-min.js'
       ])
     })
   )
 })
 
+let cachingDuration = 18*3600000 //18 hours
+let expirationDate = {}
 self.addEventListener('fetch', event => {
-  if (!navigator.onLine) {
+  if (!navigator.onLine||(expirationDate[event.request]>Date.now())) {
     event.respondWith(
       caches.match(event.request)
     )
   } else {
+    expirationDate[event.request] = new Date(Date.now() + cachingDuration).getTime()
     event.respondWith(
       fetch(event.request).catch(() => {
         return caches.match(event.request)
