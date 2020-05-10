@@ -41,7 +41,9 @@ let expirationDate = {}
 self.addEventListener('fetch', event => {
   if (!navigator.onLine||(expirationDate[event.request]>Date.now())) {
     event.respondWith(
-      caches.match(event.request)
+      caches.match(event.request).catch(() => {
+        return fetch(event.request)
+      }
     )
   } else {
     expirationDate[event.request] = new Date(Date.now() + cachingDuration).getTime()
