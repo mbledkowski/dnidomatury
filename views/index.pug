@@ -63,7 +63,9 @@ block content
         a(href=`https://linkedin.com/in/${links.linkedin}` target="_blank" rel="noopener")
           img(src="/img/social/linkedin.svg" loading="lazy" alt="LinkedIn icon")
         // Icons from simpleicons.org
-    script(async type="module" src="/js/rendertime.js")
+    link(rel='preload' href='/js/countdown-min.js' as='script' crossorigin)
+    script(type="module" src="/js/rendertime.js" async)
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900&display=swap&subset=latin-ext", rel="stylesheet" async)
     script
       | if('serviceWorker' in navigator){
       |   window.addEventListener('load', () => {
