@@ -2,6 +2,7 @@ self.addEventListener('install', event => {
   event.waitUntil( //"event.waitUntil takes a promise to define the length & success of the install. If the promise rejects, the installation is considered a failure and this ServiceWorker will be abandoned" Source: developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook
     caches.open('dnidomatury').then(cache => {
       cache.addAll([ //"We're not passing the cache.addAll promise [...] back to event.waitUntil, so even if it fails, the game will still be available offline." Same source as above.
+        'favicon-32x32.png',
         '/miesiące',
         '/godziny',
         '/minuty',
@@ -36,21 +37,22 @@ self.addEventListener('install', event => {
   )
 })
 
-let cachingDuration = 18*3600000 //18 hours
+let cachingDuration = 18 * 3600000 //18 hours
 let expirationDate = {}
 self.addEventListener('fetch', event => {
-  if (!navigator.onLine||(expirationDate[event.request]>Date.now())) {
+
+  if (!navigator.onLine || (expirationDate[event.request] > Date.now())) {
     event.respondWith(
-      caches.match(event.request).catch(() => {
-        return fetch(event.request)
-      }
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
+      })
     )
   } else {
     expirationDate[event.request] = new Date(Date.now() + cachingDuration).getTime()
     event.respondWith(
       fetch(event.request).catch(() => {
         return caches.match(event.request)
-      });
-    );
+      })
+    )
   }
 })
