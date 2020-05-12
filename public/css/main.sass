@@ -28,16 +28,13 @@ main
     display: flex
     flex-flow: column
     align-items: center
-    > h2
-      max-width: 500px
-      text-align: justify
-      > #year-select
-        font-size: inherit;
-        font-family: inherit;
-        border: 2px var(--main-black) solid;
-        border-radius: 4px;
-        &::after
-          background: var(--main-leading-colour)
+    > h2 > #year-select
+      font-size: inherit;
+      font-family: inherit;
+      border: 2px var(--main-black) solid;
+      border-radius: 4px;
+      &::after
+        background: var(--main-leading-colour)
   > #timer
     font-family: 'Montserrat'
     font-weight: 700
