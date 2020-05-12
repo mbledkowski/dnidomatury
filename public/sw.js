@@ -38,17 +38,19 @@ self.addEventListener('install', event => {
 })
 
 let cachingDuration = 18 * 3600000 //18 hours
-let expirationDate = {}
+let expirationDate = 0
 self.addEventListener('fetch', event => {
-
-  if (!navigator.onLine || (expirationDate[event.request] > Date.now())) {
+  if (!navigator.onLine || (expirationDate > Date.now())) {
     event.respondWith(
       caches.match(event.request).then((response) => {
         return response || fetch(event.request);
       })
     )
   } else {
-    expirationDate[event.request] = new Date(Date.now() + cachingDuration).getTime()
+    expirationDate = new Date(Date.now() + cachingDuration).getTime()
+    caches.keys().then((names) => {
+      for (let name of names) { caches.delete(name) }
+    })
     event.respondWith(
       fetch(event.request).catch(() => {
         return caches.match(event.request)
