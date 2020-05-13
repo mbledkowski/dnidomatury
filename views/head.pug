@@ -11,6 +11,15 @@ html(lang='pl')
     meta(property='og:type' content='website')
     meta(property='og:image' content='/img/thumbnail.jpg')
     meta(property='og:site_name' content='dni do matury')
+    - var category = ['minuty', 'godziny', 'dni', 'miesiące']
+    if year === 2020 && unit === 2
+      link(rel='amphtml', href='/amp/')
+    else if year !== 2020 && unit === 2
+      link(rel='amphtml', href=`/amp/${year}`)
+    else if year === 2020 && unit !== 2
+      link(rel='amphtml', href=`/amp/${category[unit]}`)
+    else
+      link(rel='amphtml', href=`/amp/${category[unit]}/${year}`)
     link(rel='preload' href='/css/main.css' as='style')
     link(rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'")
     link(rel='stylesheet', href='/css/320andless.css', media='(max-width: 320px)')

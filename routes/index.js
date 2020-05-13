@@ -6,4 +6,6 @@ const PagesController = require('../controllers/PagesController')
 /* Get "/" or "/something" */
 router.get('/:unit(miesi%C4%85ce|miesiace|dni|godziny|minuty)?/:year(2020|2021|2022|2023|2024)?', PagesController.index)
 
+router.get('/amp/:unit(miesi%C4%85ce|miesiace|dni|godziny|minuty)?/:year(2020|2021|2022|2023|2024)?', PagesController.amp)
+
 module.exports = router

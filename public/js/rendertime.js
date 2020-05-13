@@ -35,6 +35,22 @@ const wordForms = [{
 
 const zostacForms = [{ 0: "został" }, { 0: "zostały" }, { 0: "zostało" }]
 
+let updateURL = (num, yr) => {
+  if (num !== 2 && yr !== 2020) {
+    history.pushState({}, "", `/${wordForms[1][num]}/${yr}`)
+    document.querySelector("link[rel=amphtml]").href = `/amp/${wordForms[1][num]}/${yr}`
+  } else if (num !== 2) {
+    history.pushState({}, "", `/${wordForms[1][num]}`)
+    document.querySelector("link[rel=amphtml]").href = `/amp/${wordForms[1][num]}`
+  } else if (yr !== 2020) {
+    history.pushState({}, "", `/${yr}`)
+    document.querySelector("link[rel=amphtml]").href = `/amp/${yr}`
+  } else {
+    history.pushState({}, "", "/")
+    document.querySelector("link[rel=amphtml]").href = `/amp/`
+  }
+}
+
 let changeUnits = (element, num, event) => {
   event.preventDefault()
   unit = num //it is manditory because "setInterval" is using this value, and otherwise timer would continue showing values coresponding to mainTypeUnit
@@ -44,15 +60,7 @@ let changeUnits = (element, num, event) => {
 
   document.title = `Ile zostało ${wordForms[2][num]} do matury ${selYear}? - DniDoMatury.pl`
 
-  if (num !== 2 && selYear !== 2020) {
-    history.pushState({}, "", `/${wordForms[1][num]}/${selYear}`)
-  } else if (num !== 2) {
-    history.pushState({}, "", `/${wordForms[1][num]}`)
-  } else if (selYear !== 2020) {
-    history.pushState({}, "", `/${selYear}`)
-  } else {
-    history.pushState({}, "", "/")
-  }
+  updateURL(num, selYear)
 
   getTimersValues(num, getUnits(num))
   setTimer()
@@ -61,15 +69,7 @@ let changeUnits = (element, num, event) => {
 let changeYear = (year, num) => {
   selYear = year
   document.title = `Ile zostało ${wordForms[2][num]} do matury ${selYear}? - DniDoMatury.pl`
-  if (num !== 2 && selYear !== 2020) {
-    history.pushState({}, "", `/${wordForms[1][num]}/${selYear}`)
-  } else if (num !== 2) {
-    history.pushState({}, "", `/${wordForms[1][num]}`)
-  } else if (selYear !== 2020) {
-    history.pushState({}, "", `/${selYear}`)
-  } else {
-    history.pushState({}, "", "/")
-  }
+  updateURL(num, selYear)
   setTimer()
   let startDate = (year === 2020) ? " 8 czerwca" : " 4 maja"
   let endDate = (year === 2020) ? " 29 czerwca" : " 22 maja"
