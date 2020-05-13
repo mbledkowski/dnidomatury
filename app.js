@@ -22,7 +22,7 @@ app.use(sassMiddleware({
   outputStyle: 'compressed'
 }))
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '64800000' }))
 
 app.use('/', indexRouter)
 

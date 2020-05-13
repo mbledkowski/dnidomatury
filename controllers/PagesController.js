@@ -63,5 +63,7 @@ exports.index = (req, res, next) => {
     zostacForm: cache_getTimersValues[unit][year % 5][2]
   }
 
+  res.set('Cache-Control', 'public, max-age=64800')
+
   res.render('index', variables)
 }
