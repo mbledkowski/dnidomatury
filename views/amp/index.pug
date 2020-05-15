@@ -1,0 +1,67 @@
+extends head
+
+block content
+  header
+    h1 dni do matury
+    nav
+      - var isChecked = ['','','','']
+      - isChecked[unit] = "checked"
+      if year === 2020
+        a(href="/miesiące")
+          button(id="months" class=isChecked[3]) miesiące
+        a(href="/")
+          button(id="days" class=isChecked[2]) dni
+        a(href="/godziny")
+          button(id="hours" class=isChecked[1]) godziny
+        a(href="/minuty")
+          button(id="minutes" class=isChecked[0]) minuty
+      else
+        a(href=`/miesiące/${year}`)
+          button(id="months" class=isChecked[3]) miesiące
+        a(href=`/${year}`)
+          button(id="days" class=isChecked[2]) dni
+        a(href=`/godziny/${year}`)
+          button(id="hours" class=isChecked[1]) godziny
+        a(href=`/minuty/${year}`)
+          button(id="minutes" class=isChecked[0]) minuty
+  main
+    div(id="timer")
+      span(id="timerHeader") Do matury #{year} #{zostacForm} 
+      //- amp-date-countdown(timestamp-seconds=maturaDate layout="fixed-height" height="50")
+      //-   template(type="amp-mustache")
+      //-     span(id="mainUnit") {{d}} days, {{h}} hours, {{m}} minutes and {{s}} seconds until
+      span(id="mainUnit") #{initialTimersValues[0]}
+      span(id="subUnits") #{initialTimersValues[1]}
+    article
+      h2
+        | Matura rozpocznie się
+        b  #{startDate}
+        |  i będzie trwać do
+        b  #{endDate}
+        |. Rok szkolny dla klas maturalnych zakończy się
+        b  #{schoolEndDate}
+        |.
+      h3
+        | ⚠ Wersja AMP(uproszczona)! Przejdź do 
+        - var category = ['minuty', 'godziny', 'dni', 'miesiące']
+        if year === 2020 && unit === 2
+          a(href="/") pełnej wersji strony
+        else if year !== 2020 && unit === 2
+          a(href=`/${year}`) pełnej wersji strony
+        else if year === 2020 && unit !== 2
+          a(href=`/${category[unit]}`) pełnej wersji strony
+        else
+          a(href=`/${category[unit]}/${year}`) pełnej wersji strony
+        |. ⚠
+        include noscript
+  footer
+    h2
+      b Created by @mbledkowski
+    div(id="socialIcons")
+      a(href=`https://instagram.com/${links.ig}` target="_blank" rel="noopener")
+        amp-img(src="/img/social/instagram.svg" alt="Instagram icon" height="25px" width="25px")
+      a(href=`https://github.com/${links.github}` target="_blank"  rel="noopener")
+        amp-img(src="/img/social/github.svg" alt="GitHub icon" height="25px" width="25px")
+      a(href=`https://linkedin.com/in/${links.linkedin}` target="_blank" rel="noopener")
+        amp-img(src="/img/social/linkedin.svg" alt="LinkedIn icon" height="25px" width="25px")
+      // Icons from simpleicons.org

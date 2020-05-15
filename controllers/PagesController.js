@@ -101,6 +101,15 @@ exports.amp = (req, res, next) => {
       cache_getTimersValues[unit][year % 5] = getTimersValues.default(unit, year)
     }
   }
+
+  let firstExamDate = {
+    2020: new Date('8 June 2020 9:00 GMT+02:00').getTime() / 1000,
+    2021: new Date('4 May 2021 9:00 GMT+02:00').getTime() / 1000,
+    2022: new Date('4 May 2022 9:00 GMT+02:00').getTime() / 1000,
+    2023: new Date('4 May 2023 9:00 GMT+02:00').getTime() / 1000,
+    2024: new Date('4 May 2024 9:00 GMT+02:00').getTime() / 1000
+  }
+
   const unitNames = {
     3: "miesięcy",
     2: "dni",
@@ -125,10 +134,11 @@ exports.amp = (req, res, next) => {
     unit: unit,
     year: year,
     initialTimersValues: cache_getTimersValues[unit][year % 5],
-    zostacForm: cache_getTimersValues[unit][year % 5][2]
+    zostacForm: cache_getTimersValues[unit][year % 5][2],
+    maturaDate: firstExamDate[year]
   }
 
   res.set('Cache-Control', 'public, max-age=64800')
 
-  res.render('index', variables)
+  res.render('amp/index', variables)
 }
