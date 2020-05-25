@@ -5,7 +5,7 @@
 
 ![Thumbnail](/public/img/thumbnail.jpg)
 
-### Technologies that I used in this project:
+### Technologies that I have used in this project:
  - Node.js
  - Express.js
  - Pug.js
