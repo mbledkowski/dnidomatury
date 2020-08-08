@@ -15,6 +15,7 @@
  - Pug.js
  - Sass
  
+ Other: 
  - Heroku (Cloud Platform)
  - OVH (Domain Name Registrar)
  - Cloudflare
