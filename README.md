@@ -5,7 +5,7 @@
 
 ![Thumbnail](/public/img/thumbnail.jpg)
 
-### Technologies that I am using in this project:
+### Technologies that I have used in this project:
  Front-end:
  - [Countdown.js](https://github.com/mckamey/countdownjs)
  
