@@ -1,7 +1,7 @@
 # 🇵🇱 Strona "Dni do matury" | 🇬🇧/🇺🇸 "Days to matura" website
 🇵🇱 Strona odliczająca miesiące, dni, godziny, minuty do egzaminów maturalnych. Stworzona przez [Maciej'a Błędkowski'ego](https://github.com/mbledkowski).
 
-🇬🇧/🇺🇸 Website that shows how many months, days, hours, minutes are left to the matura exams. Created by [Maciej Błędkowski](https://github.com/mbledkowski).
+🇬🇧/🇺🇸 Website that is showing how many months, days, hours, minutes are left to the matura exams. Created by [Maciej Błędkowski](https://github.com/mbledkowski).
 
 ![Thumbnail](/public/img/thumbnail.jpg)
 
