@@ -1,10 +1,11 @@
 <template>
   <div class="layout">
     <div class="navigation">
-      <a href="/" class="logo">
-      </a>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
+      <a href="/" class="logo">dnidomatury.pl</a>
+      <Link href="/calendar">Calendar</Link>
+      <Link href="/">Timer</Link>
+      <Link href="/news">News</Link>
+      <Link href="/settings">Settings</Link>
     </div>
     <div class="content">
       <slot />
