@@ -1,32 +1,18 @@
 {
-  "name": "ddm",
-  "version": "1.0.0",
-  "main": "./bin/www",
-  "author": "mble",
-  "license": "Apache-2.0",
+  "name": "dnidomatury.pl",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "http-errors": "^1.7.3",
-    "node-sass": "^5.0.0",
-    "node-sass-middleware": "^0.11.0",
-    "pug": "^2.0.4"
+    "preact": "^10.5.15"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
-  "nodemonConfig": {
-    "restartable": "rs",
-    "ignore": [
-      "node_modules/**/node_modules"
-    ],
-    "delay": "2000",
-    "env": {
-      "NODE_ENV": "development",
-      "PORT": 8080
-    }
+    "@preact/preset-vite": "^2.1.5",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
   }
 }
