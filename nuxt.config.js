@@ -1,3 +1,5 @@
+import messages from './locales/messages.json'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -29,12 +31,14 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/i18n',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -44,6 +48,21 @@ export default {
     },
   },
 
+  i18n: {
+    locales: ['pl', 'en', 'ua', 'fr', 'de', 'es'],
+    defaultLocale: 'pl',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages,
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
+  },
 }

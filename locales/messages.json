@@ -1,0 +1,44 @@
+{
+  "pl": {
+    "welcome": "Witaj",
+    "calendar": "Kalendarz",
+    "timer": "Timer",
+    "news": "Wiadomości",
+    "settings": "Ustawienia"
+  },
+  "en": {
+    "welcome": "Welcome",
+    "calendar": "Calendar",
+    "timer": "Timer",
+    "news": "News",
+    "settings": "Settings"
+  },
+  "ua": {
+    "welcome": "Вітаю",
+    "calendar": "Календар",
+    "timer": "Таймер",
+    "news": "Новини",
+    "settings": "Налаштування"
+  },
+  "fr": {
+    "welcome": "Bienvenue",
+    "calendar": "Calendrier",
+    "timer": "Chronomètre",
+    "news": "Nouvelles",
+    "settings": "Paramètres"
+  },
+  "de": {
+    "welcome": "Willkommen",
+    "calendar": "Kalender",
+    "timer": "Timer",
+    "news": "Nachrichten",
+    "settings": "Einstellungen"
+  },
+  "es": {
+    "welcome": "Bienvenido",
+    "calendar": "Calendario",
+    "timer": "Temporizador",
+    "news": "Noticias",
+    "settings": "Ajustes"
+  }
+}
