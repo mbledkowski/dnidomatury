@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav renders correctly 1`] = `
+<nav>
+  <nuxt-link-stub
+    to="/calendar"
+  >
+    <img
+      alt="calendar"
+      class="sub nav-icon invert"
+      src="/icons/calendar.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      calendar
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/"
+  >
+    <img
+      alt="timer"
+      class="sub nav-icon invert"
+      src="/icons/timer.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      timer
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/news"
+  >
+    <img
+      alt="news"
+      class="sub nav-icon invert"
+      src="/icons/news.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      news
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/settings"
+  >
+    <img
+      alt="settings"
+      class="main nav-icon invert"
+      src="/icons/settings.svg"
+    />
+     
+    <p
+      class="sub"
+    >
+      settings.title
+    </p>
+  </nuxt-link-stub>
+</nav>
+`;
+
+exports[`Nav renders correctly with links 1`] = `
+<nav>
+  <nuxt-link-stub
+    to="/calendar"
+  >
+    <img
+      alt="calendar"
+      class="sub nav-icon invert"
+      src="/icons/calendar.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      calendar
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/"
+  >
+    <img
+      alt="timer"
+      class="sub nav-icon invert"
+      src="/icons/timer.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      timer
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/news"
+  >
+    <img
+      alt="news"
+      class="sub nav-icon invert"
+      src="/icons/news.svg"
+    />
+     
+    <p
+      class="main"
+    >
+      news
+    </p>
+  </nuxt-link-stub>
+   
+  <nuxt-link-stub
+    to="/settings"
+  >
+    <img
+      alt="settings"
+      class="main nav-icon invert"
+      src="/icons/settings.svg"
+    />
+     
+    <p
+      class="sub"
+    >
+      settings.title
+    </p>
+  </nuxt-link-stub>
+</nav>
+`;
