@@ -51,7 +51,16 @@
   "en": {
     "welcome": "Welcome",
     "calendar": "Calendar",
-    "timer": "Timer",
+    "timer": {
+      "title": "Timer",
+      "timeLeftDesc": "Until the begining of the matura exam {year}",
+      "desc": "The exam will begin on {beginDate} and will last until the {endDate}. The school year for the senior classes will end on {schoolEndDate}.",
+      "months": "months",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    },
     "news": "News",
     "settings": {
       "title": "Settings",
@@ -91,7 +100,16 @@
   "ua": {
     "welcome": "Вітаю",
     "calendar": "Календар",
-    "timer": "Таймер",
+    "timer": {
+      "title": "Таймер",
+      "timeLeftDesc": "До початку математичної екзаменування {year}",
+      "desc": "Екзамен почнеться {beginDate} та пройде до {endDate}. Рік навчання для класів математичних закінчиться {schoolEndDate}.",
+      "months": "місяців",
+      "days": "днів",
+      "hours": "годин",
+      "minutes": "хвилин",
+      "seconds": "секунд"
+    },
     "news": "Новини",
     "settings": {
       "title": "Налаштування",
@@ -131,7 +149,16 @@
   "fr": {
     "welcome": "Bienvenue",
     "calendar": "Calendrier",
-    "timer": "Chronomètre",
+    "timer": {
+      "title": "Temps",
+      "timeLeftDesc": "Avant le début de l'examen mathématique {year}",
+      "desc": "L'examen commence {beginDate} et se termine {endDate}. L'année de formation des classes mathématiques se termine {schoolEndDate}.",
+      "months": "mois",
+      "days": "jours",
+      "hours": "heures",
+      "minutes": "minutes",
+      "seconds": "secondes"
+    },
     "news": "Nouvelles",
     "settings": {
       "title": "Paramètres",
@@ -171,7 +198,16 @@
   "de": {
     "welcome": "Willkommen",
     "calendar": "Kalender",
-    "timer": "Timer",
+    "timer": {
+      "title": "Zeit",
+      "timeLeftDesc": "Vor dem Beginn des mathematischen Prüfungs {year}",
+      "desc": "Die mathematische Prüfung beginnt {beginDate} und endet {endDate}. Das Jahr der Mathematik-Schulung endet {schoolEndDate}.",
+      "months": "Monate",
+      "days": "Tage",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "seconds": "Sekunden"
+    },
     "news": "Nachrichten",
     "settings": {
       "title": "Einstellungen",
@@ -211,7 +247,16 @@
   "es": {
     "welcome": "Bienvenido",
     "calendar": "Calendario",
-    "timer": "Temporizador",
+    "timer": {
+      "title": "Temporizador",
+      "timeLeftDesc": "Antes del inicio del examen matemático {year}",
+      "desc": "El examen comienza {beginDate} y termina {endDate}. El año de formación de las clases matemáticas se termina {schoolEndDate}.",
+      "months": "meses",
+      "days": "días",
+      "hours": "horas",
+      "minutes": "minutos",
+      "seconds": "segundos"
+    },
     "news": "Noticias",
     "settings": {
       "title": "Ajustes",
