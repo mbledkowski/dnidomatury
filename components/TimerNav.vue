@@ -1,9 +1,17 @@
 <template>
   <nav class="timer-nav">
-    <nuxt-link to="/"><p>days</p></nuxt-link>
-    <nuxt-link to="/hours"><p>hours</p></nuxt-link>
-    <nuxt-link to="/minutes"><p>minutes</p></nuxt-link>
-    <nuxt-link to="/seconds"><p>seconds</p></nuxt-link>
+    <nuxt-link to="/"
+      ><p>{{ $t('timer.days') }}</p></nuxt-link
+    >
+    <nuxt-link to="/hours"
+      ><p>{{ $t('timer.hours') }}</p></nuxt-link
+    >
+    <nuxt-link to="/minutes"
+      ><p>{{ $t('timer.minutes') }}</p></nuxt-link
+    >
+    <nuxt-link to="/seconds"
+      ><p>{{ $t('timer.seconds') }}</p></nuxt-link
+    >
   </nav>
 </template>
 <script lang="ts">
