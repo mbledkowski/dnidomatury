@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Nav renders correctly 1`] = `
-<nav>
+<nav
+  class="main-nav"
+>
   <nuxt-link-stub
     to="/calendar"
   >
@@ -30,7 +32,7 @@ exports[`Nav renders correctly 1`] = `
     <p
       class="main"
     >
-      timer
+      timer.title
     </p>
   </nuxt-link-stub>
    
@@ -69,7 +71,9 @@ exports[`Nav renders correctly 1`] = `
 `;
 
 exports[`Nav renders correctly with links 1`] = `
-<nav>
+<nav
+  class="main-nav"
+>
   <nuxt-link-stub
     to="/calendar"
   >
@@ -98,7 +102,7 @@ exports[`Nav renders correctly with links 1`] = `
     <p
       class="main"
     >
-      timer
+      timer.title
     </p>
   </nuxt-link-stub>
    
