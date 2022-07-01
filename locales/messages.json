@@ -28,6 +28,15 @@
         "warmińskoMazurskie": "warmińsko-mazurskie",
         "zachodniopomorskie": "zachodniopomorskie"
       }
+    },
+    "about": {
+      "title": "O aplikacji",
+      "description": "W pełni open-sourceowa aplikacja dostępna na licencji ",
+      "license": "Apache-2.0",
+      "source": "Kod źródłowy dostępny na ",
+      "sourceLink": "GitHubie",
+      "author": "Autor",
+      "email": "Email"
     }
   },
   "en": {
@@ -59,6 +68,15 @@
         "warmińskoMazurskie": "Warmian-Masurian",
         "zachodniopomorskie": "West Pomeranian"
       }
+    },
+    "about": {
+      "title": "About",
+      "description": "Fully open-source application available under ",
+      "license": "Apache-2.0",
+      "source": "Source code available on ",
+      "sourceLink": "GitHub",
+      "author": "Author",
+      "email": "Email"
     }
   },
   "ua": {
@@ -90,6 +108,15 @@
         "warmińskoMazurskie": "Вармінська",
         "zachodniopomorskie": "Західно-Поморська"
       }
+    },
+    "about": {
+      "title": "Про програму",
+      "description": "Повністю відкрита програма доступна за ліцензією ",
+      "license": "Apache-2.0",
+      "source": "Джерело коду доступне на ",
+      "sourceLink": "GitHub",
+      "author": "Автор",
+      "email": "Email"
     }
   },
   "fr": {
@@ -121,6 +148,15 @@
         "warmińskoMazurskie": "Warmińsko-Mazurskie",
         "zachodniopomorskie": "Zachodniopomorskie"
       }
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Application source code disponible sous ",
+      "license": "Apache-2.0",
+      "source": "Code source disponible sur ",
+      "sourceLink": "GitHub",
+      "author": "Auteur",
+      "email": "Email"
     }
   },
   "de": {
@@ -152,6 +188,15 @@
         "warmińskoMazurskie": "Warmińsko-Mazurskie",
         "zachodniopomorskie": "Westpomorskie"
       }
+    },
+    "about": {
+      "title": "Über",
+      "description": "Der Quellcode ist verfügbar unter ",
+      "license": "Apache-2.0",
+      "source": "Quellcode ist verfügbar unter ",
+      "sourceLink": "GitHub",
+      "author": "Autor",
+      "email": "Email"
     }
   },
   "es": {
@@ -183,6 +228,15 @@
         "warmińskoMazurskie": "Warmińsko-Mazurskie",
         "zachodniopomorskie": "Oeste de Pomoria"
       }
+    },
+    "about": {
+      "title": "Acerca de",
+      "description": "El código fuente está disponible en ",
+      "license": "Apache-2.0",
+      "source": "El código fuente está disponible en ",
+      "sourceLink": "GitHub",
+      "author": "Autor",
+      "email": "Email"
     }
   }
 }
