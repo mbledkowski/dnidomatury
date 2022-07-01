@@ -25,9 +25,9 @@
           <option
             v-for="(locale, index) in $i18n.locales"
             :key="index"
-            :value="locale"
+            :value="locale.code"
           >
-            {{ languages[locale] }}
+            {{ languages[locale.code] }}
           </option>
         </select>
       </label>
