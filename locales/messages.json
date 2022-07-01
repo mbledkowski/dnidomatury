@@ -2,7 +2,16 @@
   "pl": {
     "welcome": "Witaj",
     "calendar": "Kalendarz",
-    "timer": "Timer",
+    "timer": {
+      "title": "Timer",
+      "timeLeftDesc": "Do rozpoczęcia matury {year} pozostało",
+      "desc": "Matura rozpocznie się {beginDate} i będzie trwać do {endDate}. Rok szkolny dla klas maturalnych zakończy się {schoolEndDate}.",
+      "months": "miesiące",
+      "days": "dni",
+      "hours": "godziny",
+      "minutes": "minuty",
+      "seconds": "sekundy"
+    },
     "news": "Wiadomości",
     "settings": {
       "title": "Ustawienia",

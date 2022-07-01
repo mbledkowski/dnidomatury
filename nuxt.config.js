@@ -49,7 +49,14 @@ export default {
   },
 
   i18n: {
-    locales: ['pl', 'en', 'ua', 'fr', 'de', 'es'],
+    locales: [
+      { code: 'pl', iso: 'pl-PL' },
+      { code: 'en', iso: 'en-US' },
+      { code: 'ua', iso: 'uk-UA' },
+      { code: 'fr', iso: 'fr-FR' },
+      { code: 'de', iso: 'de-DE' },
+      { code: 'es', iso: 'es-ES' },
+    ],
     defaultLocale: 'pl',
     vueI18n: {
       fallbackLocale: 'en',

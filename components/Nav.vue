@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="main-nav">
     <nuxt-link to="/calendar">
       <img
         src="/icons/calendar.svg"
@@ -10,7 +10,7 @@
     </nuxt-link>
     <nuxt-link to="/">
       <img src="/icons/timer.svg" alt="timer" class="sub nav-icon invert" />
-      <p class="main">{{ $t('timer') }}</p>
+      <p class="main">{{ $t('timer.title') }}</p>
     </nuxt-link>
     <nuxt-link to="/news">
       <img src="/icons/news.svg" alt="news" class="sub nav-icon invert" />
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss">
-nav {
+nav.main-nav {
   @apply flex flex-row justify-evenly items-center mx-auto text-white bg-black rounded-none md:rounded-lg h-16 md:h-8 text-lg font-bold w-full md:w-96 lowercase fixed bottom-0 z-10 md:static md:my-8;
   > a {
     @apply w-1/4 md:w-auto text-center;

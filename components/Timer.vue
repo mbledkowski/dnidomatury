@@ -1,5 +1,8 @@
 <template>
-  <Nav />
+  <main class="timer">
+    <Nav />
+    <TimerNav />
+  </main>
 </template>
 
 <script>
