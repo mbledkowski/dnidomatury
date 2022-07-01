@@ -1,26 +1,26 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <Nav />
     <main>
       <!-- Settings header -->
       <header>
-        <h1 class="text-2xl font-sans">Settings</h1>
+        <h1 class="text-2xl font-sans">{{ $t('settings.title') }}</h1>
       </header>
       <!-- Dark mode switch -->
       <label>
-        Dark mode
+        <p>{{ $t('settings.darkMode') }}</p>
         <input v-model="darkMode" type="checkbox" />
         <span class="lever"></span>
       </label>
       <!-- Notifications switch -->
       <label>
-        Notifications
+        <p>{{ $t('settings.notifications') }}</p>
         <input v-model="notifications" type="checkbox" />
         <span class="lever"></span>
       </label>
       <!-- Language select field -->
       <label>
-        Language
+        <p>{{ $t('settings.language') }}</p>
         <select v-model="location" @change="onChange(location)">
           <option
             v-for="(locale, index) in $i18n.locales"
@@ -33,24 +33,52 @@
       </label>
       <!-- Location select field -->
       <label>
-        Location
-        <select v-model="localisation">
-          <option value="DŚL">dolnośląskie</option>
-          <option value="KP">kujawsko-pomorskie</option>
-          <option value="LBL">lubelskie</option>
-          <option value="LBU">lubuskie</option>
-          <option value="ŁDZ">łódzkie</option>
-          <option value="MAZ">mazowieckie</option>
-          <option value="MŁP">małopolskie</option>
-          <option value="OPO">opolskie</option>
-          <option value="PDL">podlaskie</option>
-          <option value="PK">podkarpackie</option>
-          <option value="POM">pomorskie</option>
-          <option value="ŚL">śląskie</option>
-          <option value="ŚW">świętokrzyskie</option>
-          <option value="WLKP">wielkopolskie</option>
-          <option value="WM">warmińsko-mazurskie</option>
-          <option value="ZPM">zachodniopomorskie</option>
+        <p>{{ $t('settings.localization.title') }}</p>
+        <select v-model="localization">
+          <option value="DŚL">
+            {{ $t('settings.localization.dolnośląskie') }}
+          </option>
+          <option value="KP">
+            {{ $t('settings.localization.kujawskoPomorskie') }}
+          </option>
+          <option value="LBL">
+            {{ $t('settings.localization.lubelskie') }}
+          </option>
+          <option value="LBU">
+            {{ $t('settings.localization.lubuskie') }}
+          </option>
+          <option value="ŁDZ">{{ $t('settings.localization.łódzkie') }}</option>
+          <option value="MAZ">
+            {{ $t('settings.localization.mazowieckie') }}
+          </option>
+          <option value="MŁP">
+            {{ $t('settings.localization.małopolskie') }}
+          </option>
+          <option value="OPO">
+            {{ $t('settings.localization.opolskie') }}
+          </option>
+          <option value="PDL">
+            {{ $t('settings.localization.podlaskie') }}
+          </option>
+          <option value="PK">
+            {{ $t('settings.localization.podkarpackie') }}
+          </option>
+          <option value="POM">
+            {{ $t('settings.localization.pomorskie') }}
+          </option>
+          <option value="ŚL">{{ $t('settings.localization.śląskie') }}</option>
+          <option value="ŚW">
+            {{ $t('settings.localization.świętokrzyskie') }}
+          </option>
+          <option value="WLKP">
+            {{ $t('settings.localization.wielkopolskie') }}
+          </option>
+          <option value="WM">
+            {{ $t('settings.localization.warmińskoMazurskie') }}
+          </option>
+          <option value="ZPM">
+            {{ $t('settings.localization.zachodniopomorskie') }}
+          </option>
         </select>
       </label>
     </main>
@@ -66,14 +94,14 @@ export default Vue.extend({
       darkMode: false,
       notifications: false,
       location: this.$i18n.locale,
-      localisation: 'POM',
+      localization: 'POM',
       languages: {
-        pl: 'Polish',
+        pl: 'Polski',
         en: 'English',
-        ua: 'Ukrainian',
-        fr: 'French',
-        de: 'German',
-        es: 'Spanish',
+        ua: 'Українська',
+        fr: 'Français',
+        de: 'Deutsch',
+        es: 'Español',
       },
     }
   },

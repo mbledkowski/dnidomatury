@@ -4,41 +4,185 @@
     "calendar": "Kalendarz",
     "timer": "Timer",
     "news": "Wiadomości",
-    "settings": "Ustawienia"
+    "settings": {
+      "title": "Ustawienia",
+      "darkMode": "Tryb ciemny",
+      "notifications": "Powiadomienia",
+      "language": "Język",
+      "localization": {
+        "title": "Lokalizacja",
+        "dolnośląskie": "dolnośląskie",
+        "kujawskoPomorskie": "kujawsko-pomorskie",
+        "lubelskie": "lubelskie",
+        "lubuskie": "lubuskie",
+        "łódzkie": "łódzkie",
+        "mazowieckie": "mazowieckie",
+        "małopolskie": "małopolskie",
+        "opolskie": "opolskie",
+        "podlaskie": "podlaskie",
+        "podkarpackie": "podkarpackie",
+        "pomorskie": "pomorskie",
+        "śląskie": "śląskie",
+        "świętokrzyskie": "świętokrzyskie",
+        "wielkopolskie": "wielkopolskie",
+        "warmińskoMazurskie": "warmińsko-mazurskie",
+        "zachodniopomorskie": "zachodniopomorskie"
+      }
+    }
   },
   "en": {
     "welcome": "Welcome",
     "calendar": "Calendar",
     "timer": "Timer",
     "news": "News",
-    "settings": "Settings"
+    "settings": {
+      "title": "Settings",
+      "darkMode": "Dark mode",
+      "notifications": "Notifications",
+      "language": "Language",
+      "localization": {
+        "title": "Localization",
+        "dolnośląskie": "Lower Silesian",
+        "kujawskoPomorskie": "Kuyavian-Pomeranian",
+        "lubelskie": "Lublin",
+        "lubuskie": "Lubusz",
+        "łódzkie": "Łódź",
+        "mazowieckie": "Masovian",
+        "małopolskie": "Lesser Poland",
+        "opolskie": "Opole",
+        "podlaskie": "Podlaskie",
+        "podkarpackie": "Subcarpathian",
+        "pomorskie": "Pomeranian",
+        "śląskie": "Silesian",
+        "świętokrzyskie": "Holy Cross",
+        "wielkopolskie": "Greater Poland",
+        "warmińskoMazurskie": "Warmian-Masurian",
+        "zachodniopomorskie": "West Pomeranian"
+      }
+    }
   },
   "ua": {
     "welcome": "Вітаю",
     "calendar": "Календар",
     "timer": "Таймер",
     "news": "Новини",
-    "settings": "Налаштування"
+    "settings": {
+      "title": "Налаштування",
+      "darkMode": "Темний режим",
+      "notifications": "Сповіщення",
+      "language": "Мова",
+      "localization": {
+        "title": "Локалізація",
+        "dolnośląskie": "Долуніська",
+        "kujawskoPomorskie": "Куявсько-Поморська",
+        "lubelskie": "Лубельська",
+        "lubuskie": "Лубіська",
+        "łódzkie": "Лодзька",
+        "mazowieckie": "Мазовецька",
+        "małopolskie": "Мальовська",
+        "opolskie": "Опольська",
+        "podlaskie": "Подільська",
+        "podkarpackie": "Подкарпатська",
+        "pomorskie": "Поморська",
+        "śląskie": "Словенська",
+        "świętokrzyskie": "Святошинська",
+        "wielkopolskie": "Великопольська",
+        "warmińskoMazurskie": "Вармінська",
+        "zachodniopomorskie": "Західно-Поморська"
+      }
+    }
   },
   "fr": {
     "welcome": "Bienvenue",
     "calendar": "Calendrier",
     "timer": "Chronomètre",
     "news": "Nouvelles",
-    "settings": "Paramètres"
+    "settings": {
+      "title": "Paramètres",
+      "darkMode": "Mode sombre",
+      "notifications": "Notifications",
+      "language": "Langue",
+      "localization": {
+        "title": "Localisation",
+        "dolnośląskie": "Bas-Silesien",
+        "kujawskoPomorskie": "Kuyavian-Pomerania",
+        "lubelskie": "Lublin",
+        "lubuskie": "Lubusz",
+        "łódzkie": "Łódzkie",
+        "mazowieckie": "Mazovien",
+        "małopolskie": "Moins de Polonie",
+        "opolskie": "Opole",
+        "podlaskie": "Podlaskie",
+        "podkarpackie": "Podkarpackie",
+        "pomorskie": "Pomorskie",
+        "śląskie": "Śląskie",
+        "świętokrzyskie": "Świętokrzyskie",
+        "wielkopolskie": "Wielkopolskie",
+        "warmińskoMazurskie": "Warmińsko-Mazurskie",
+        "zachodniopomorskie": "Zachodniopomorskie"
+      }
+    }
   },
   "de": {
     "welcome": "Willkommen",
     "calendar": "Kalender",
     "timer": "Timer",
     "news": "Nachrichten",
-    "settings": "Einstellungen"
+    "settings": {
+      "title": "Einstellungen",
+      "darkMode": "Dunkler Modus",
+      "notifications": "Benachrichtigungen",
+      "language": "Sprache",
+      "localization": {
+        "title": "Lokalisierung",
+        "dolnośląskie": "Untere Silesien",
+        "kujawskoPomorskie": "Kuyavian-Pomerania",
+        "lubelskie": "Lublin",
+        "lubuskie": "Lubusz",
+        "łódzkie": "Lödz",
+        "mazowieckie": "Mazovien",
+        "małopolskie": "Wenig Polen",
+        "opolskie": "Opole",
+        "podlaskie": "Podlaskie",
+        "podkarpackie": "Podkarpackie",
+        "pomorskie": "Pomorskie",
+        "śląskie": "Silesien",
+        "świętokrzyskie": "Heiliger Kreuz",
+        "wielkopolskie": "Großpolnische",
+        "warmińskoMazurskie": "Warmińsko-Mazurskie",
+        "zachodniopomorskie": "Westpomorskie"
+      }
+    }
   },
   "es": {
     "welcome": "Bienvenido",
     "calendar": "Calendario",
     "timer": "Temporizador",
     "news": "Noticias",
-    "settings": "Ajustes"
+    "settings": {
+      "title": "Ajustes",
+      "darkMode": "Modo oscuro",
+      "notifications": "Notificaciones",
+      "language": "Idioma",
+      "localization": {
+        "title": "Localización",
+        "dolnośląskie": "Silesia Inferior",
+        "kujawskoPomorskie": "Kuyavian-Pomerania",
+        "lubelskie": "Lublin",
+        "lubuskie": "Lubusz",
+        "łódzkie": "Lódz",
+        "mazowieckie": "Mazovia",
+        "małopolskie": "Menos de Polonia",
+        "opolskie": "Opolonia",
+        "podlaskie": "Podlaskie",
+        "podkarpackie": "Podkarpackie",
+        "pomorskie": "Pomorskie",
+        "śląskie": "Silesia",
+        "świętokrzyskie": "Cruz de Heiliger",
+        "wielkopolskie": "Polonia Grande",
+        "warmińskoMazurskie": "Warmińsko-Mazurskie",
+        "zachodniopomorskie": "Oeste de Pomoria"
+      }
+    }
   }
 }

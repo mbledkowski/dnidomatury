@@ -1,5 +1,5 @@
 <template>
-  <nav class="">
+  <nav>
     <nuxt-link to="/calendar">
       <img
         src="/icons/calendar.svg"
@@ -22,7 +22,7 @@
         alt="settings"
         class="main nav-icon invert"
       />
-      <p class="sub">{{ $t('settings') }}</p>
+      <p class="sub">{{ $t('settings.title') }}</p>
     </nuxt-link>
   </nav>
 </template>
@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="scss">
 nav {
-  @apply flex flex-row justify-evenly items-center mx-auto text-white bg-black rounded-none md:rounded-lg h-16 md:h-8 text-lg font-bold w-full md:w-96 lowercase;
+  @apply flex flex-row justify-evenly items-center mx-auto text-white bg-black rounded-none md:rounded-lg h-16 md:h-8 text-lg font-bold w-full md:w-96 lowercase sticky bottom-0 z-10 md:static;
   > a {
     @apply w-1/4 md:w-auto text-center;
     > img {
