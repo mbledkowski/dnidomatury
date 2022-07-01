@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils'
+import Nav from '@/components/Nav.vue'
 
 describe('Nav', () => {
   it('renders correctly', () => {
