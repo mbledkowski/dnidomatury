@@ -98,7 +98,7 @@ export default Vue.extend({
       languages: {
         pl: 'Polski',
         en: 'English',
-        ua: 'Українська',
+        uk: 'Українська',
         fr: 'Français',
         de: 'Deutsch',
         es: 'Español',

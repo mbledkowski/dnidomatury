@@ -53,7 +53,7 @@ export default {
     locales: [
       { code: 'pl', iso: 'pl-PL' },
       { code: 'en', iso: 'en-US' },
-      { code: 'ua', iso: 'uk-UA' },
+      { code: 'uk', iso: 'uk-UA' },
       { code: 'fr', iso: 'fr-FR' },
       { code: 'de', iso: 'de-DE' },
       { code: 'es', iso: 'es-ES' },
