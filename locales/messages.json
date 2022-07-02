@@ -5,6 +5,9 @@
     "timer": {
       "title": "Timer",
       "timeLeftDesc": "Do rozpoczęcia matury {year} pozostało",
+      "timeLeftEndDesc": "Do oficjalnego zakończenia matury {year} pozostało",
+      "timeLeftMakeupDesc": "Do rozpoczęcia egzaminu poprawkowego z matury {year} pozostało",
+      "timeLeftMakeupEndDesc": "Do oficjalnego zakończenia egzaminu poprawkowego z matury {year} pozostało",
       "desc": "Matura rozpocznie się {beginDate} i będzie trwać do {endDate}. Rok szkolny dla klas maturalnych zakończy się {schoolEndDate}.",
       "months": "miesiące",
       "days": "dni",
