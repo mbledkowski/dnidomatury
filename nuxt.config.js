@@ -54,9 +54,6 @@ export default {
       { code: 'pl', iso: 'pl-PL' },
       { code: 'en', iso: 'en-US' },
       { code: 'uk', iso: 'uk-UA' },
-      { code: 'fr', iso: 'fr-FR' },
-      { code: 'de', iso: 'de-DE' },
-      { code: 'es', iso: 'es-ES' },
     ],
     defaultLocale: 'pl',
     vueI18n: {

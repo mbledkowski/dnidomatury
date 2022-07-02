@@ -99,9 +99,6 @@ export default Vue.extend({
         pl: 'Polski',
         en: 'English',
         uk: 'Українська',
-        fr: 'Français',
-        de: 'Deutsch',
-        es: 'Español',
       },
     }
   },
