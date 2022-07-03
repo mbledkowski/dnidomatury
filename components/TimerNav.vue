@@ -24,7 +24,7 @@ nav.timer-nav {
   @apply flex flex-row justify-evenly items-center mx-auto text-white bg-black rounded-none md:rounded-lg h-8 text-lg font-bold w-full md:w-96 lowercase my-8;
   a {
     @apply w-1/4 md:w-auto text-center;
-    &.nuxt-link-active {
+    &.nuxt-link-exact-active {
       @apply text-yellow-300;
     }
     > p {
