@@ -1,6 +1,6 @@
 <template>
   <nav class="main-nav">
-    <nuxt-link to="/calendar">
+    <nuxt-link :to="localePath('/calendar')">
       <img
         src="/icons/calendar.svg"
         alt="calendar"
@@ -8,15 +8,15 @@
       />
       <p class="main">{{ $t('calendar') }}</p>
     </nuxt-link>
-    <nuxt-link to="/">
+    <nuxt-link :to="localePath('/')">
       <img src="/icons/timer.svg" alt="timer" class="sub nav-icon invert" />
       <p class="main">{{ $t('timer.title') }}</p>
     </nuxt-link>
-    <nuxt-link to="/news">
+    <nuxt-link :to="localePath('/news')">
       <img src="/icons/news.svg" alt="news" class="sub nav-icon invert" />
       <p class="main">{{ $t('news') }}</p>
     </nuxt-link>
-    <nuxt-link to="/settings">
+    <nuxt-link :to="localePath('/settings')">
       <img
         src="/icons/settings.svg"
         alt="settings"
