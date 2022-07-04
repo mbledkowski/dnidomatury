@@ -32,6 +32,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    '@nuxtjs/color-mode',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,7 +42,6 @@ export default {
     '@nuxtjs/i18n',
     '@nuxt/content',
     '@nuxtjs/svg',
-    '@nuxtjs/color-mode',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
