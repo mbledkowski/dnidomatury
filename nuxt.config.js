@@ -40,6 +40,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/i18n',
     '@nuxt/content',
+    '@nuxtjs/svg',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
