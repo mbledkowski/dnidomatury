@@ -1,6 +1,10 @@
-<template><Timer /></template>
+<template><Timer :data="data" /></template>
 <script lang="ts">
-export default {
+import Vue from 'vue'
+import timerData from '~/mixins/timerData'
+
+export default Vue.extend({
   name: 'TimerSeconds',
-}
+  mixins: [timerData],
+})
 </script>
