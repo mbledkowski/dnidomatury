@@ -4,11 +4,11 @@
     "calendar": "Kalendarz",
     "timer": {
       "title": "Timer",
-      "timeLeftDesc": "Do rozpoczęcia matury {year} pozostało",
-      "timeLeftEndDesc": "Do oficjalnego zakończenia matury {year} pozostało",
-      "timeLeftMakeupDesc": "Do rozpoczęcia egzaminu poprawkowego z matury {year} pozostało",
-      "timeLeftMakeupEndDesc": "Do oficjalnego zakończenia egzaminu poprawkowego z matury {year} pozostało",
-      "desc": "Matura rozpocznie się {beginDate} i będzie trwać do {endDate}. Rok szkolny dla klas maturalnych zakończy się {schoolEndDate}.",
+      "timeLeftDesc": "Do matury {year} zostało",
+      "timeLeftEndDesc": "Do oficjalnego zakończenia matury {year} zostało",
+      "timeLeftMakeupDesc": "Do egzaminu poprawkowego z matury {year} zostało",
+      "timeLeftMakeupEndDesc": "Do oficjalnego zakończenia egzaminu poprawkowego z matury {year} zostało",
+      "desc": "Matura rozpocznie się <b>{beginDate}</b> i będzie trwać do <b>{endDate}</b>. Rok szkolny dla klas maturalnych zakończy się <b>{schoolEndDate}</b>.",
       "months": {
         "one": "miesiąc",
         "two": "miesiące",
@@ -81,8 +81,11 @@
     "calendar": "Calendar",
     "timer": {
       "title": "Timer",
-      "timeLeftDesc": "Until the begining of the matura exam {year}",
-      "desc": "The exam will begin on {beginDate} and will last until the {endDate}. The school year for the senior classes will end on {schoolEndDate}.",
+      "timeLeftDesc": "Time to the matura exam of {year}",
+      "timeLeftEndDesc": "Time to the official end of the matura exam of {year}",
+      "timeLeftMakeupDesc": "Time to the make-up exam of the matura exam of {year}",
+      "timeLeftMakeupEndDesc": "Time to the official end of the make-up exam of the matura exam of {year}",
+      "desc": "The exam will begin on <b>{beginDate}</b> and will last until the <b>{endDate}</b>. The school year for the senior classes will end on <b>{schoolEndDate}</b>.",
       "months": {
         "one": "month",
         "two": "months",
@@ -155,8 +158,11 @@
     "calendar": "Календар",
     "timer": {
       "title": "Таймер",
-      "timeLeftDesc": "До початку математичної екзаменування {year}",
-      "desc": "Екзамен почнеться {beginDate} та пройде до {endDate}. Рік навчання для класів математичних закінчиться {schoolEndDate}.",
+      "timeLeftDesc": "Час до закінчення екзамену за {year}",
+      "timeLeftEndDesc": "Час до офіційного закінчення екзамену за {year}",
+      "timeLeftMakeupDesc": "Час до закінчення заповнення екзамену за {year}",
+      "timeLeftMakeupEndDesc": "Час до офіційного закінчення заповнення екзамену за {year}",
+      "desc": "Екзамен почнеться <b>{beginDate}</b> та пройде до <b>{endDate}</b>. Рік навчання для класів математичних закінчиться <b>{schoolEndDate}</b>.",
       "months": {
         "one": "місяць",
         "two": "місяці",

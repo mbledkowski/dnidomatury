@@ -149,15 +149,15 @@
       </p>
     </div>
     <TimerNav />
-    <p>
-      {{
+    <p
+      v-html="
         $t('timer.desc', {
           beginDate: beginDateFormated,
           endDate: endDateFormated,
           schoolEndDate: schoolEndDateFormated,
         })
-      }}
-    </p>
+      "
+    ></p>
   </main>
 </template>
 
