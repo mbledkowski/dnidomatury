@@ -17,5 +17,6 @@
     },
     "types": ["@nuxt/types", "@types/node", "@nuxtjs/i18n", "@nuxt/content"]
   },
+  "files": ["@types/custom.d.ts"],
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
