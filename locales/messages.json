@@ -9,11 +9,36 @@
       "timeLeftMakeupDesc": "Do rozpoczęcia egzaminu poprawkowego z matury {year} pozostało",
       "timeLeftMakeupEndDesc": "Do oficjalnego zakończenia egzaminu poprawkowego z matury {year} pozostało",
       "desc": "Matura rozpocznie się {beginDate} i będzie trwać do {endDate}. Rok szkolny dla klas maturalnych zakończy się {schoolEndDate}.",
-      "months": "miesiące",
-      "days": "dni",
-      "hours": "godziny",
-      "minutes": "minuty",
-      "seconds": "sekundy"
+      "months": {
+        "one": "miesiąc",
+        "two": "miesiące",
+        "five": "miesięcy"
+      },
+      "days": {
+        "one": "dzień",
+        "two": "dni",
+        "five": "dni"
+      },
+      "hours": {
+        "one": "godzina",
+        "two": "godziny",
+        "five": "godzin"
+      },
+      "minutes": {
+        "one": "minuta",
+        "two": "minuty",
+        "five": "minut"
+      },
+      "seconds": {
+        "one": "sekunda",
+        "two": "sekundy",
+        "five": "sekund"
+      },
+      "milliseconds": {
+        "one": "milisekunda",
+        "two": "milisekundy",
+        "five": "milisekund"
+      }
     },
     "news": "Wiadomości",
     "settings": {
@@ -58,11 +83,36 @@
       "title": "Timer",
       "timeLeftDesc": "Until the begining of the matura exam {year}",
       "desc": "The exam will begin on {beginDate} and will last until the {endDate}. The school year for the senior classes will end on {schoolEndDate}.",
-      "months": "months",
-      "days": "days",
-      "hours": "hours",
-      "minutes": "minutes",
-      "seconds": "seconds"
+      "months": {
+        "one": "month",
+        "two": "months",
+        "five": "months"
+      },
+      "days": {
+        "one": "day",
+        "two": "days",
+        "five": "days"
+      },
+      "hours": {
+        "one": "hour",
+        "two": "hours",
+        "five": "hours"
+      },
+      "minutes": {
+        "one": "minute",
+        "two": "minutes",
+        "five": "minutes"
+      },
+      "seconds": {
+        "one": "second",
+        "two": "seconds",
+        "five": "seconds"
+      },
+      "milliseconds": {
+        "one": "millisecond",
+        "two": "milliseconds",
+        "five": "milliseconds"
+      }
     },
     "news": "News",
     "settings": {
@@ -107,11 +157,36 @@
       "title": "Таймер",
       "timeLeftDesc": "До початку математичної екзаменування {year}",
       "desc": "Екзамен почнеться {beginDate} та пройде до {endDate}. Рік навчання для класів математичних закінчиться {schoolEndDate}.",
-      "months": "місяців",
-      "days": "днів",
-      "hours": "годин",
-      "minutes": "хвилин",
-      "seconds": "секунд"
+      "months": {
+        "one": "місяць",
+        "two": "місяці",
+        "five": "місяців"
+      },
+      "days": {
+        "one": "день",
+        "two": "дні",
+        "five": "днів"
+      },
+      "hours": {
+        "one": "година",
+        "two": "години",
+        "five": "годин"
+      },
+      "minutes": {
+        "one": "хвилина",
+        "two": "хвилини",
+        "five": "хвилин"
+      },
+      "seconds": {
+        "one": "секунда",
+        "two": "секунди",
+        "five": "секунд"
+      },
+      "milliseconds": {
+        "one": "мілісекунда",
+        "two": "мілісекунди",
+        "five": "мілісекунд"
+      }
     },
     "news": "Новини",
     "settings": {

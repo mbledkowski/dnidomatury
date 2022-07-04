@@ -1,5 +1,5 @@
 <template>
-  <Timer :data="data" />
+  <Timer :data="data" mode="d" />
 </template>
 
 <script lang="ts">

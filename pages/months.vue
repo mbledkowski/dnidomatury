@@ -1,4 +1,4 @@
-<template><Timer :data="data" /></template>
+<template><Timer :data="data" mode="M" /></template>
 <script lang="ts">
 import Vue from 'vue'
 import timerData from '~/mixins/timerData'

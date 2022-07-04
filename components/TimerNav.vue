@@ -1,16 +1,16 @@
 <template>
   <nav class="timer-nav">
     <nuxt-link :to="localePath('/')"
-      ><p>{{ $t('timer.days') }}</p></nuxt-link
+      ><p>{{ $t('timer.days.two') }}</p></nuxt-link
     >
     <nuxt-link :to="localePath('/hours')"
-      ><p>{{ $t('timer.hours') }}</p></nuxt-link
+      ><p>{{ $t('timer.hours.two') }}</p></nuxt-link
     >
     <nuxt-link :to="localePath('/minutes')"
-      ><p>{{ $t('timer.minutes') }}</p></nuxt-link
+      ><p>{{ $t('timer.minutes.two') }}</p></nuxt-link
     >
     <nuxt-link :to="localePath('/seconds')"
-      ><p>{{ $t('timer.seconds') }}</p></nuxt-link
+      ><p>{{ $t('timer.seconds.two') }}</p></nuxt-link
     >
   </nav>
 </template>
