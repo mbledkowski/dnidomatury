@@ -1,12 +1,15 @@
 <template>
   <div>
     <Nav />
-    <main class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>{{ title }}</h1>
-          <p>{{ message }}</p>
+    <main class="news">
+      <div v-if="news.length > 0">
+        <div v-for="(item, index) in news" :key="index">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.text }}</p>
         </div>
+      </div>
+      <div v-else>
+        <p>{{ $t('news.noNews') }}</p>
       </div>
     </main>
   </div>
@@ -15,11 +18,11 @@
 <script lang="ts">
 export default {
   name: 'MainNews',
-  data() {
-    return {
-      title: 'News',
-      message: 'This is the news page.',
-    }
+  props: {
+    news: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

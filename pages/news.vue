@@ -1,5 +1,5 @@
 <template>
-  <News />
+  <News :news="[]" />
 </template>
 
 <script lang="ts">

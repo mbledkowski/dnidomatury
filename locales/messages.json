@@ -40,7 +40,12 @@
         "five": "milisekund"
       }
     },
-    "news": "Wiadomości",
+    "news": {
+      "title": "Wiadomości",
+      "noNews": "Brak wiadomości",
+      "info": "Informacja",
+      "warning": "Ostrzeżenie"
+    },
     "settings": {
       "title": "Ustawienia",
       "darkMode": "Tryb ciemny",
@@ -117,7 +122,12 @@
         "five": "milliseconds"
       }
     },
-    "news": "News",
+    "news": {
+      "title": "News",
+      "noNews": "No news",
+      "info": "Information",
+      "warning": "Warning"
+    },
     "settings": {
       "title": "Settings",
       "darkMode": "Dark mode",
@@ -194,7 +204,12 @@
         "five": "мілісекунд"
       }
     },
-    "news": "Новини",
+    "news": {
+      "title": "Новини",
+      "noNews": "Немає новин",
+      "info": "Інформація",
+      "warning": "Попередження"
+    },
     "settings": {
       "title": "Налаштування",
       "darkMode": "Темний режим",

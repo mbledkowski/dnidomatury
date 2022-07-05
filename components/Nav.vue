@@ -10,7 +10,7 @@
     </nuxt-link>
     <nuxt-link :to="localePath('/news')">
       <NewsIcon class="sub" />
-      <p class="main">{{ $t('news') }}</p>
+      <p class="main">{{ $t('news.title') }}</p>
     </nuxt-link>
     <nuxt-link :to="localePath('/settings')">
       <SettingsIcon class="main" />
