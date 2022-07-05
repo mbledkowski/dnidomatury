@@ -1,164 +1,178 @@
 <template>
-  <main class="timer">
+  <div>
     <Nav />
-    <h1>{{ $t('timer.timeLeftDesc', { year }) }}</h1>
-    <div v-if="mode === 'M'">
-      <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.one') }}
-      </p>
-      <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.two') }}
-      </p>
-      <p v-else>
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.five') }}
-      </p>
-      <p>
-        <span v-if="timeLeft.days >= 1 && timeLeft.days < 2">{{
-          timeLeft.days + ' ' + $t('timer.days.one')
-        }}</span>
-        <span v-else-if="timeLeft.days >= 2 && timeLeft.days < 5">{{
-          timeLeft.days + ' ' + $t('timer.days.two')
-        }}</span>
-        <span v-else>{{ timeLeft.days + ' ' + $t('timer.days.five') }}</span>
-        <span v-if="timeLeft.hours >= 1 && timeLeft.hours < 2">{{
-          timeLeft.hours + ' ' + $t('timer.hours.one')
-        }}</span>
-        <span v-else-if="timeLeft.hours >= 2 && timeLeft.hours < 5">{{
-          timeLeft.hours + ' ' + $t('timer.hours.two')
-        }}</span>
-        <span v-else>{{ timeLeft.hours + ' ' + $t('timer.hours.five') }}</span>
-      </p>
-    </div>
-    <div v-else-if="mode === 'd'">
-      <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.one') }}
-      </p>
-      <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.two') }}
-      </p>
-      <p v-else>
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.five') }}
-      </p>
-      <p>
-        <span v-if="timeLeft.hours >= 1 && timeLeft.hours < 2">{{
-          timeLeft.hours + ' ' + $t('timer.hours.one')
-        }}</span>
-        <span v-else-if="timeLeft.hours >= 2 && timeLeft.hours < 5">{{
-          timeLeft.hours + ' ' + $t('timer.hours.two')
-        }}</span>
-        <span v-else>{{ timeLeft.hours + ' ' + $t('timer.hours.five') }}</span>
-        <span v-if="timeLeft.minutes >= 1 && timeLeft.minutes < 2">{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.one')
-        }}</span>
-        <span v-else-if="timeLeft.minutes >= 2 && timeLeft.minutes < 5">{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.two')
-        }}</span>
-        <span v-else>{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.five')
-        }}</span>
-      </p>
-    </div>
-    <div v-else-if="mode === 'h'">
-      <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.one') }}
-      </p>
-      <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.two') }}
-      </p>
-      <p v-else>
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.five') }}
-      </p>
-      <p>
-        <span v-if="timeLeft.minutes >= 1 && timeLeft.minutes < 2">{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.one')
-        }}</span>
-        <span v-else-if="timeLeft.minutes >= 2 && timeLeft.minutes < 5">{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.two')
-        }}</span>
-        <span v-else>{{
-          timeLeft.minutes + ' ' + $t('timer.minutes.five')
-        }}</span>
-        <span v-if="timeLeft.seconds >= 1 && timeLeft.seconds < 2">{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.one')
-        }}</span>
-        <span v-else-if="timeLeft.seconds >= 2 && timeLeft.seconds < 5">{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.two')
-        }}</span>
-        <span v-else>{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.five')
-        }}</span>
-      </p>
-    </div>
-    <div v-else-if="mode === 'm'">
-      <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.one') }}
-      </p>
-      <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.two') }}
-      </p>
-      <p v-else>
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.five') }}
-      </p>
-      <p>
-        <span v-if="timeLeft.seconds >= 1 && timeLeft.seconds < 2">{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.one')
-        }}</span>
-        <span v-else-if="timeLeft.seconds >= 2 && timeLeft.seconds < 5">{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.two')
-        }}</span>
-        <span v-else>{{
-          timeLeft.seconds + ' ' + $t('timer.seconds.five')
-        }}</span>
-        <span v-if="timeLeft.milliseconds >= 1 && timeLeft.milliseconds < 2">{{
-          timeLeft.milliseconds + ' ' + $t('timer.milliseconds.one')
-        }}</span>
-        <span
-          v-else-if="timeLeft.milliseconds >= 2 && timeLeft.milliseconds < 5"
-          >{{
-            timeLeft.milliseconds + ' ' + $t('timer.milliseconds.two')
-          }}</span
-        >
-        <span v-else>{{
-          timeLeft.milliseconds + ' ' + $t('timer.milliseconds.five')
-        }}</span>
-      </p>
-    </div>
-    <div v-else>
-      <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.one') }}
-      </p>
-      <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.two') }}
-      </p>
-      <p v-else>
-        {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.five') }}
-      </p>
-      <p>
-        <span v-if="timeLeft.milliseconds >= 1 && timeLeft.milliseconds < 2">{{
-          timeLeft.milliseconds + ' ' + $t('timer.milliseconds.one')
-        }}</span>
-        <span
-          v-else-if="timeLeft.milliseconds >= 2 && timeLeft.milliseconds < 5"
-          >{{
-            timeLeft.milliseconds + ' ' + $t('timer.milliseconds.two')
-          }}</span
-        >
-        <span v-else>{{
-          timeLeft.milliseconds + ' ' + $t('timer.milliseconds.five')
-        }}</span>
-      </p>
-    </div>
-    <TimerNav />
-    <p
-      v-html="
-        $t('timer.desc', {
-          beginDate: beginDateFormated,
-          endDate: endDateFormated,
-          schoolEndDate: schoolEndDateFormated,
-        })
-      "
-    ></p>
-  </main>
+    <main class="timer">
+      <h1>
+        <b>{{ $t('timer.timeLeftDesc', { year }) }}</b>
+      </h1>
+      <div v-if="mode === 'M'">
+        <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.one') }}
+        </p>
+        <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.two') }}
+        </p>
+        <p v-else>
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.months.five') }}
+        </p>
+        <p>
+          <span v-if="timeLeft.days >= 1 && timeLeft.days < 2">{{
+            timeLeft.days + ' ' + $t('timer.days.one')
+          }}</span>
+          <span v-else-if="timeLeft.days >= 2 && timeLeft.days < 5">{{
+            timeLeft.days + ' ' + $t('timer.days.two')
+          }}</span>
+          <span v-else>{{ timeLeft.days + ' ' + $t('timer.days.five') }}</span>
+          <span v-if="timeLeft.hours >= 1 && timeLeft.hours < 2">{{
+            timeLeft.hours + ' ' + $t('timer.hours.one')
+          }}</span>
+          <span v-else-if="timeLeft.hours >= 2 && timeLeft.hours < 5">{{
+            timeLeft.hours + ' ' + $t('timer.hours.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.hours + ' ' + $t('timer.hours.five')
+          }}</span>
+        </p>
+      </div>
+      <div v-else-if="mode === 'd'">
+        <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.one') }}
+        </p>
+        <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.two') }}
+        </p>
+        <p v-else>
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.days.five') }}
+        </p>
+        <p>
+          <span v-if="timeLeft.hours >= 1 && timeLeft.hours < 2">{{
+            timeLeft.hours + ' ' + $t('timer.hours.one')
+          }}</span>
+          <span v-else-if="timeLeft.hours >= 2 && timeLeft.hours < 5">{{
+            timeLeft.hours + ' ' + $t('timer.hours.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.hours + ' ' + $t('timer.hours.five')
+          }}</span>
+          <span v-if="timeLeft.minutes >= 1 && timeLeft.minutes < 2">{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.one')
+          }}</span>
+          <span v-else-if="timeLeft.minutes >= 2 && timeLeft.minutes < 5">{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.five')
+          }}</span>
+        </p>
+      </div>
+      <div v-else-if="mode === 'h'">
+        <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.one') }}
+        </p>
+        <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.two') }}
+        </p>
+        <p v-else>
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.hours.five') }}
+        </p>
+        <p>
+          <span v-if="timeLeft.minutes >= 1 && timeLeft.minutes < 2">{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.one')
+          }}</span>
+          <span v-else-if="timeLeft.minutes >= 2 && timeLeft.minutes < 5">{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.minutes + ' ' + $t('timer.minutes.five')
+          }}</span>
+          <span v-if="timeLeft.seconds >= 1 && timeLeft.seconds < 2">{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.one')
+          }}</span>
+          <span v-else-if="timeLeft.seconds >= 2 && timeLeft.seconds < 5">{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.five')
+          }}</span>
+        </p>
+      </div>
+      <div v-else-if="mode === 'm'">
+        <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.one') }}
+        </p>
+        <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.two') }}
+        </p>
+        <p v-else>
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.minutes.five') }}
+        </p>
+        <p>
+          <span v-if="timeLeft.seconds >= 1 && timeLeft.seconds < 2">{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.one')
+          }}</span>
+          <span v-else-if="timeLeft.seconds >= 2 && timeLeft.seconds < 5">{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.two')
+          }}</span>
+          <span v-else>{{
+            timeLeft.seconds + ' ' + $t('timer.seconds.five')
+          }}</span>
+          <span
+            v-if="timeLeft.milliseconds >= 1 && timeLeft.milliseconds < 2"
+            >{{
+              timeLeft.milliseconds + ' ' + $t('timer.milliseconds.one')
+            }}</span
+          >
+          <span
+            v-else-if="timeLeft.milliseconds >= 2 && timeLeft.milliseconds < 5"
+            >{{
+              timeLeft.milliseconds + ' ' + $t('timer.milliseconds.two')
+            }}</span
+          >
+          <span v-else>{{
+            timeLeft.milliseconds + ' ' + $t('timer.milliseconds.five')
+          }}</span>
+        </p>
+      </div>
+      <div v-else>
+        <p v-if="timeLeftMain >= 1 && timeLeftMain < 2">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.one') }}
+        </p>
+        <p v-else-if="timeLeftMain >= 2 && timeLeftMain < 5">
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.two') }}
+        </p>
+        <p v-else>
+          {{ Math.floor(timeLeftMain) + ' ' + $t('timer.seconds.five') }}
+        </p>
+        <p>
+          <span
+            v-if="timeLeft.milliseconds >= 1 && timeLeft.milliseconds < 2"
+            >{{
+              timeLeft.milliseconds + ' ' + $t('timer.milliseconds.one')
+            }}</span
+          >
+          <span
+            v-else-if="timeLeft.milliseconds >= 2 && timeLeft.milliseconds < 5"
+            >{{
+              timeLeft.milliseconds + ' ' + $t('timer.milliseconds.two')
+            }}</span
+          >
+          <span v-else>{{
+            timeLeft.milliseconds + ' ' + $t('timer.milliseconds.five')
+          }}</span>
+        </p>
+      </div>
+      <TimerNav />
+      <p
+        v-html="
+          $t('timer.desc', {
+            beginDate: beginDateFormated,
+            endDate: endDateFormated,
+            schoolEndDate: schoolEndDateFormated,
+          })
+        "
+      ></p>
+    </main>
+  </div>
 </template>
 
 <script lang="ts">

@@ -2,10 +2,6 @@
   <div>
     <Nav />
     <main>
-      <!-- Settings header -->
-      <header>
-        <h1 class="text-2xl font-sans">{{ $t('settings.title') }}</h1>
-      </header>
       <!-- Dark mode switch -->
       <label>
         <p>{{ $t('settings.darkMode') }}</p>

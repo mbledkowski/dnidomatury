@@ -1,0 +1,8 @@
+body {
+  @apply text-center;
+  main > h1,
+  main > p {
+    @apply w-96 mx-auto;
+    max-width: calc(100% - 2rem);
+  }
+}
