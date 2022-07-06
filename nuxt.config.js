@@ -33,6 +33,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
     '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -62,6 +63,16 @@ export default {
       fallbackLocale: 'en',
       messages,
     },
+  },
+
+  googleFonts: {
+    families: {
+      Montserrat: [400, 700],
+    },
+    subsets: ['latin', 'latin-ext', 'cyrillic'],
+    prefetch: true,
+    preconnect: true,
+    preload: true,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
