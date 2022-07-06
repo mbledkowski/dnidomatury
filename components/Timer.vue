@@ -143,6 +143,7 @@ export default Vue.extend({
 <style lang="scss">
 #mainTimer > div > div {
   @apply flex flex-col;
+  text-rendering: optimizeSpeed;
   & > p {
     @apply font-bold text-yellow-300 overflow-hidden text-ellipsis;
     white-space: nowrap;

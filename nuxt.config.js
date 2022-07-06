@@ -68,6 +68,7 @@ export default {
   googleFonts: {
     families: {
       Montserrat: [400, 700],
+      Roboto: [700],
     },
     subsets: ['latin', 'latin-ext', 'cyrillic'],
     prefetch: true,

@@ -1,6 +1,9 @@
 body {
   @apply text-center;
   font-family: Montserrat, sans-serif;
+  #mainTimer {
+    font-family: Roboto, sans-serif;
+  }
   main {
     > h1,
     > p {
