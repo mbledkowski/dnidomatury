@@ -1,22 +1,25 @@
 <template>
-  <nav class="main-nav">
-    <nuxt-link :to="localePath('/calendar')">
-      <CalendarIcon class="sub" />
-      <p class="main">{{ $t('calendar') }}</p>
-    </nuxt-link>
-    <nuxt-link :to="localePath('/')">
-      <TimerIcon class="sub" />
-      <p class="main">{{ $t('timer.title') }}</p>
-    </nuxt-link>
-    <nuxt-link :to="localePath('/news')">
-      <NewsIcon class="sub" />
-      <p class="main">{{ $t('news.title') }}</p>
-    </nuxt-link>
-    <nuxt-link :to="localePath('/settings')">
-      <SettingsIcon class="main" />
-      <p class="sub">{{ $t('settings.title') }}</p>
-    </nuxt-link>
-  </nav>
+  <header id="mainHeader">
+    <Logo />
+    <nav class="main-nav">
+      <nuxt-link :to="localePath('/calendar')">
+        <CalendarIcon class="sub" />
+        <p class="main">{{ $t('calendar') }}</p>
+      </nuxt-link>
+      <nuxt-link :to="localePath('/')">
+        <TimerIcon class="sub" />
+        <p class="main">{{ $t('timer.title') }}</p>
+      </nuxt-link>
+      <nuxt-link :to="localePath('/news')">
+        <NewsIcon class="sub" />
+        <p class="main">{{ $t('news.title') }}</p>
+      </nuxt-link>
+      <nuxt-link :to="localePath('/settings')">
+        <SettingsIcon class="main" />
+        <p class="sub">{{ $t('settings.title') }}</p>
+      </nuxt-link>
+    </nav>
+  </header>
 </template>
 <script lang="ts">
 import Vue from 'vue'
