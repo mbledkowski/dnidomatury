@@ -141,16 +141,29 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss">
-#mainTimer > div > div > p:first-child {
-  font-size: 130px;
+#mainTimer > div > div > p {
   @apply font-bold text-yellow-300;
-  &::before {
+  &:first-child {
+    font-size: 8rem;
+    &:before {
+      margin: 0.4rem;
+      -webkit-text-stroke: 0.3rem black;
+    }
+  }
+  &:last-child {
+    font-size: 4rem;
+    & > span:before,
+    & > span > span:before {
+      margin: -0.2rem;
+      -webkit-text-stroke: 0.15rem black;
+    }
+  }
+  &::before,
+  > span::before,
+  > span > span::before {
     content: attr(value);
     position: absolute;
-    @apply text-black;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 4.6px black;
-    margin: 6px;
   }
 }
 </style>
