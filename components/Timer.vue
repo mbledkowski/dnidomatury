@@ -141,29 +141,41 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss">
-#mainTimer > div > div > p {
-  @apply font-bold text-yellow-300;
-  &:first-child {
-    font-size: 8rem;
-    &:before {
-      margin: 0.4rem;
-      -webkit-text-stroke: 0.3rem black;
+#mainTimer > div > div {
+  @apply flex flex-col;
+  & > p {
+    @apply font-bold text-yellow-300 overflow-hidden text-ellipsis;
+    white-space: nowrap;
+    &:first-child {
+      @apply text-5xl md:text-9xl;
+      &:before {
+        margin: 0.4rem;
+        -webkit-text-stroke: 0.3rem black;
+        @media screen and (max-width: 768px) {
+          margin: 0.133rem;
+          --webkit-text-stroke: 0.01rem black;
+        }
+      }
     }
-  }
-  &:last-child {
-    font-size: 4rem;
-    & > span:before,
-    & > span > span:before {
-      margin: -0.2rem;
-      -webkit-text-stroke: 0.15rem black;
+    &:last-child {
+      @apply text-3xl md:text-6xl;
+      & > span:before,
+      & > span > span:before {
+        margin: -0.2rem;
+        -webkit-text-stroke: 0.15rem black;
+        @media screen and (max-width: 768px) {
+          margin: -0.075rem;
+          --webkit-text-stroke: 0.01rem black;
+        }
+      }
     }
-  }
-  &::before,
-  > span::before,
-  > span > span::before {
-    content: attr(value);
-    position: absolute;
-    -webkit-text-fill-color: transparent;
+    &::before,
+    > span::before,
+    > span > span::before {
+      content: attr(value);
+      position: absolute;
+      color: transparent;
+    }
   }
 }
 </style>
