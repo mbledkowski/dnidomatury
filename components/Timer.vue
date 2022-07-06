@@ -148,25 +148,25 @@ export default Vue.extend({
     white-space: nowrap;
     &:first-child {
       @apply text-5xl md:text-9xl;
+      @media (max-width: 767px) {
+        -webkit-text-stroke: 0.2rem black;
+      }
       &:before {
         margin: 0.4rem;
         -webkit-text-stroke: 0.3rem black;
-        @media screen and (max-width: 768px) {
-          margin: 0.133rem;
-          --webkit-text-stroke: 0.01rem black;
-        }
+        @apply max-w-full overflow-hidden text-ellipsis hidden md:inline;
       }
     }
     &:last-child {
       @apply text-3xl md:text-6xl;
+      @media (max-width: 767px) {
+        -webkit-text-stroke: 0.1rem black;
+      }
       & > span:before,
       & > span > span:before {
         margin: -0.2rem;
         -webkit-text-stroke: 0.15rem black;
-        @media screen and (max-width: 768px) {
-          margin: -0.075rem;
-          --webkit-text-stroke: 0.01rem black;
-        }
+        @apply max-w-full overflow-hidden text-ellipsis hidden md:inline;
       }
     }
     &::before,
