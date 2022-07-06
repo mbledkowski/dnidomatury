@@ -142,6 +142,7 @@ export default Vue.extend({
 </script>
 <style lang="scss">
 #mainTimer > div > div {
+  font-family: Raleway, sans-serif;
   @apply flex flex-col;
   text-rendering: optimizeSpeed;
   & > p {
@@ -150,7 +151,7 @@ export default Vue.extend({
     &:first-child {
       @apply text-5xl md:text-9xl;
       @media (max-width: 767px) {
-        -webkit-text-stroke: 0.2rem black;
+        -webkit-text-stroke: 0.18rem black;
       }
       &:before {
         margin: 0.4rem;
