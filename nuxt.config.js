@@ -17,7 +17,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/main'],
+  css: ['@/assets/css/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -68,12 +68,13 @@ export default {
   googleFonts: {
     families: {
       Montserrat: [400, 700],
-      Roboto: [700],
+      Raleway: [700],
     },
     subsets: ['latin', 'latin-ext', 'cyrillic'],
     prefetch: true,
     preconnect: true,
     preload: true,
+    download: true,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
