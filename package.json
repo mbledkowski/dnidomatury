@@ -19,7 +19,7 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^7.2.2",
+    "@nuxtjs/i18n": "^7.2.3",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.4.0",
     "core-js": "^3.19.3",
