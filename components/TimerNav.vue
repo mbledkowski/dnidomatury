@@ -1,5 +1,10 @@
 <template>
   <nav class="timer-nav">
+    <nuxt-link :to="localePath('/months')"
+      ><p>
+        {{ $t('timer.months.two') }}
+      </p></nuxt-link
+    >
     <nuxt-link :to="localePath('/')"
       ><p>{{ $t('timer.days.two') }}</p></nuxt-link
     >
@@ -8,9 +13,6 @@
     >
     <nuxt-link :to="localePath('/minutes')"
       ><p>{{ $t('timer.minutes.two') }}</p></nuxt-link
-    >
-    <nuxt-link :to="localePath('/seconds')"
-      ><p>{{ $t('timer.seconds.two') }}</p></nuxt-link
     >
   </nav>
 </template>
