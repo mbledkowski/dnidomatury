@@ -4,13 +4,13 @@
       v-if="timeLeftMain >= 1 && timeLeftMain < 2"
       :value="Math.floor(timeLeftMain) + ' ' + $t(`timer.${firstValue}.one`)"
     >
-      {{ Math.floor(timeLeftMain) + '' + $t(`timer.${firstValue}.one`) }}
+      {{ Math.floor(timeLeftMain) + ' ' + $t(`timer.${firstValue}.one`) }}
     </p>
     <p
       v-else-if="timeLeftMain >= 2 && timeLeftMain < 5"
       :value="Math.floor(timeLeftMain) + ' ' + $t(`timer.${firstValue}.two`)"
     >
-      {{ Math.floor(timeLeftMain) + '' + $t(`timer.${firstValue}.two`) }}
+      {{ Math.floor(timeLeftMain) + ' ' + $t(`timer.${firstValue}.two`) }}
     </p>
     <p
       v-else
